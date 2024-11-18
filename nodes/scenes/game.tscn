@@ -1,12 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://be3qdxjda7uh8"]
+[gd_scene load_steps=3 format=3 uid="uid://be3qdxjda7uh8"]
 
 [ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://nodes/book.tscn" id="1_g7nhy"]
+[ext_resource type="Resource" uid="uid://kaooq83rjaen" path="res://data/books/test_book2.tres" id="2_w6tb5"]
 
 [node name="GameScene" type="Node2D"]
 
 [node name="Book1" parent="." instance=ExtResource("1_g7nhy")]
-position = Vector2(512, 552)
+position = Vector2(281, 336)
 
 [node name="Book2" parent="." instance=ExtResource("1_g7nhy")]
-modulate = Color(0.305882, 1, 1, 1)
-position = Vector2(695, 402)
+position = Vector2(530, 254)
+base_data = ExtResource("2_w6tb5")

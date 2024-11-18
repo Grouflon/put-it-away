@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BookData" load_steps=2 format=3 uid="uid://bgmi8nosup356"]
+
+[ext_resource type="Script" path="res://scripts/book_data.gd" id="1_f6g42"]
+
+[resource]
+script = ExtResource("1_f6g42")
+title = "Le monde de Rocannon T.1"
+author = "Ursula K. Le Guin"
+year_of_publication = 1966
+in_collection = true
+return_date = 20241119
+condition = 1
+category = 2
+tags = Array[String](["SF", "Fiction"])
+color = Color(0.919281, 4.47616e-06, 1.15514e-06, 1)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BookData" load_steps=2 format=3 uid="uid://kaooq83rjaen"]
+
+[ext_resource type="Script" path="res://scripts/book_data.gd" id="1_xeop3"]
+
+[resource]
+script = ExtResource("1_xeop3")
+title = "Triceratops and Bottoms"
+author = "Lola Faust"
+year_of_publication = 2022
+in_collection = true
+return_date = 20241123
+condition = 3
+category = 2
+tags = Array[String](["SF", "Fiction", "VO"])
+color = Color(0.950469, 0.480372, 1, 1)
