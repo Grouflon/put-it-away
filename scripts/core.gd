@@ -11,27 +11,28 @@ func _ready() -> void:
 	update_items_z()	
 
 func _process(delta: float) -> void:
-	var interact = Input.is_action_pressed("Interact")
+	var is_interact_just_pressed = Input.is_action_just_pressed("Interact")
+	var is_interact_down = Input.is_action_pressed("Interact")
 	var mouse_position = get_viewport().get_mouse_position()
 	
-	if interact:
-		if dragged_item == null:
-			var topmost_item: Item
-			var topmost_z: int = -99999
-			for item in hovered_items:
-				if item.z_index > topmost_z:
-					topmost_z = item.z_index
-					topmost_item = item
-		
-			if topmost_item != null:
-				# acquire dragged item
-				dragged_item = topmost_item
-				drag_offset = mouse_position - dragged_item.position
-				var found = tools.remove_from_array(items, dragged_item)
-				assert(found)
-				items.push_back(dragged_item)
-				update_items_z()
-	else:
+	if dragged_item == null && is_interact_just_pressed:
+		var topmost_item: Item
+		var topmost_z: int = -99999
+		for item in hovered_items:
+			if item.z_index > topmost_z:
+				topmost_z = item.z_index
+				topmost_item = item
+	
+		if topmost_item != null:
+			# acquire dragged item
+			dragged_item = topmost_item
+			drag_offset = mouse_position - dragged_item.position
+			var found = tools.remove_from_array(items, dragged_item)
+			assert(found)
+			items.push_back(dragged_item)
+			update_items_z()
+			
+	if !is_interact_down:
 		# lose dragged item
 		dragged_item = null
 		drag_offset = Vector2.ZERO

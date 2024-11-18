@@ -43,6 +43,7 @@ offset_top = -141.0
 offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[font_size=35][center]{title}"
 fit_content = true
@@ -60,6 +61,7 @@ offset_top = 131.0
 offset_bottom = 157.225
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[font_size=12][center]{author}"
 scroll_active = false
@@ -76,6 +78,7 @@ offset_top = 147.0
 offset_bottom = 173.225
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[font_size=12][center][i]{date}"
 scroll_active = false
@@ -92,6 +95,7 @@ offset_top = 185.0
 offset_bottom = 201.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[font_size=10][right]{condition}"
 scroll_active = false
