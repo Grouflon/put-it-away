@@ -1,62 +1,64 @@
 extends Node
 class_name GameCore
 
-var items: Array[Item]
-var hovered_items: Array[Item]
-var dragged_item: Item
-var drag_offset: Vector2
+enum GameState
+{
+	NONE,
+	DAY_INTRO,
+	GAME,
+}
+
+var game_state: GameState = GameState.NONE
+@export var item_manager: ItemManager
+var game_scene: GameScene
+
+var day_format_string: String
 
 func _ready() -> void:
-	fetch_items($"/root", items)
-	update_items_z()	
-
-func _process(delta: float) -> void:
-	var is_interact_just_pressed = Input.is_action_just_pressed("Interact")
-	var is_interact_down = Input.is_action_pressed("Interact")
-	var mouse_position = get_viewport().get_mouse_position()
+	game_scene = $"/root/GameScene"
+	assert(game_scene != null)
+	day_format_string = game_scene.day_text.text
 	
-	if dragged_item == null && is_interact_just_pressed:
-		var topmost_item: Item
-		var topmost_z: int = -99999
-		for item in hovered_items:
-			if item.z_index > topmost_z:
-				topmost_z = item.z_index
-				topmost_item = item
+	item_manager.initialize()
 	
-		if topmost_item != null:
-			# acquire dragged item
-			dragged_item = topmost_item
-			drag_offset = mouse_position - dragged_item.position
-			var found = tools.remove_from_array(items, dragged_item)
-			assert(found)
-			items.push_back(dragged_item)
-			update_items_z()
-			
-	if !is_interact_down:
-		# lose dragged item
-		dragged_item = null
-		drag_offset = Vector2.ZERO
+	set_state(GameState.DAY_INTRO)
+	
+func set_state(state: GameState):
+	# exit state
+	match game_state:
+		GameState.DAY_INTRO:
+			pass
 		
-	if dragged_item != null:
-		dragged_item.position = mouse_position - drag_offset
-
-func notify_mouse_entered_item(item: Item):
-	assert(!hovered_items.has(item))
-	hovered_items.append(item)
-	pass
+		GameState.GAME:
+			item_manager.set_drag_enabled(false)
+			pass
 	
-func notify_mouse_exited_item(item: Item):
-	var found = tools.remove_from_array(hovered_items, item)
-	assert(found)
-
-func update_items_z():
-	var z = 0
-	for item in items:
-		item.z_index = z
-		z += 1
+	game_state = state
 	
-func fetch_items(node: Node, results: Array[Item]):
-	if node is Item:
-		results.push_back(node)
-	for child in node.get_children():
-		fetch_items(child, results)
+	# enter state
+	match game_state:
+		GameState.DAY_INTRO:
+			game_scene.day_text.text = day_format_string.format({"day": 1})
+			game_scene.animation_player.animation_finished.connect(day_intro_animation_finished)
+			game_scene.animation_player.play("day_intro")
+			
+			pass
+		
+		GameState.GAME:
+			item_manager.set_drag_enabled(true)
+			pass
+			
+			
+
+func _process(_delta: float):
+	match game_state:
+		GameState.DAY_INTRO:
+			pass
+		
+		GameState.GAME:
+			pass
+
+func day_intro_animation_finished(anim_name: StringName):
+	assert(anim_name == "day_intro")
+	game_scene.animation_player.animation_finished.disconnect(day_intro_animation_finished)
+	set_state(GameState.GAME)

@@ -13,9 +13,9 @@ func _process(delta: float) -> void:
 	pass
 
 func on_mouse_entered():
-	core.notify_mouse_entered_item(self)
+	core.item_manager.notify_mouse_entered_item(self)
 	pass
 	
 func on_mouse_exited():
-	core.notify_mouse_exited_item(self)
+	core.item_manager.notify_mouse_exited_item(self)
 	pass

@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://byia45xa8rdf7"]
+[gd_scene load_steps=3 format=3 uid="uid://byia45xa8rdf7"]
 
 [ext_resource type="Script" path="res://scripts/core.gd" id="1_2n1nw"]
+[ext_resource type="Script" path="res://scripts/item_manager.gd" id="2_mm3s2"]
 
-[node name="Core" type="Node"]
+[node name="Core" type="Node" node_paths=PackedStringArray("item_manager")]
 script = ExtResource("1_2n1nw")
+item_manager = NodePath("ItemManager")
+
+[node name="ItemManager" type="Node" parent="."]
+script = ExtResource("2_mm3s2")

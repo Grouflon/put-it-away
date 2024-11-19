@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DayData" load_steps=5 format=3 uid="uid://co33rdifn8cy6"]
+
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="1_wpbsb"]
+[ext_resource type="Script" path="res://scripts/resources/day_data.gd" id="2_fbl4b"]
+[ext_resource type="Resource" uid="uid://bgmi8nosup356" path="res://data/books/test_book.tres" id="2_l6ked"]
+[ext_resource type="Resource" uid="uid://kaooq83rjaen" path="res://data/books/test_book2.tres" id="3_nf13s"]
+
+[resource]
+script = ExtResource("2_fbl4b")
+books = Array[ExtResource("1_wpbsb")]([ExtResource("2_l6ked"), ExtResource("3_nf13s")])
