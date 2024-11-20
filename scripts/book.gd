@@ -13,20 +13,23 @@ var title_format_string: String
 var author_format_string: String
 var date_format_string: String
 var condition_format_string: String
+var initialized: bool
 
-func _ready():
-	super()
-	
+func initialize():
+	if initialized: return
 	title_format_string = title.text
 	author_format_string = author.text
 	date_format_string = date.text
 	condition_format_string = condition.text
-	
+	initialized = true
+
+func _ready():
 	if base_data != null:
 		set_data(base_data)
 	
 
 func set_data(data: BookData):
+	initialize()
 	if data == null:
 		return
 	

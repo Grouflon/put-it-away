@@ -1,15 +1,16 @@
 extends Node
 class_name BookBox
 
-@export var collider: Area2D
 @export var text: RichTextLabel
 
-func _ready():
-	collider.mouse_entered.connect(mouse_entered)
-	collider.mouse_exited.connect(mouse_exited)
+var text_format_string: String
+var initialized: bool # hack to work around shitty ready order thing
 
-func mouse_entered():
-	pass
-	
-func mouse_exited():
-	pass
+func initialize():
+	if initialized: return
+	text_format_string = text.text
+	initialized = true
+
+func update_book_count(book_count: int):
+	initialize()
+	text.text = text_format_string.format({"book_count": book_count})

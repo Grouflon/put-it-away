@@ -2,10 +2,9 @@ extends Node
 class_name ItemManager
 
 var items: Array[Item]
-var hovered_items: Array[Item]
 var dragged_item: Item
 var drag_offset: Vector2
-var drag_enabled: bool
+var drag_enabled: bool = true
 
 func set_drag_enabled(value: bool):
 	if value == drag_enabled: return
@@ -15,44 +14,28 @@ func set_drag_enabled(value: bool):
 		drop_dragged_item()
 
 func initialize():
-	fetch_items($"/root", items)
+	#fetch_items($"/root", items)
 	update_items_z()
 
-func _process(delta: float) -> void:
+func process(input: InputData):
 	if !drag_enabled: return
 	
-	var is_interact_just_pressed = Input.is_action_just_pressed("Interact")
-	var is_interact_down = Input.is_action_pressed("Interact")
-	var mouse_position = get_viewport().get_mouse_position()
+	var hovered_item: Item
+	if input.hovered_object is Item:
+		hovered_item = input.hovered_object
 	
-	if dragged_item == null && is_interact_just_pressed:
-		var topmost_item: Item
-		var topmost_z: int = -99999
-		for item in hovered_items:
-			if item.z_index > topmost_z:
-				topmost_z = item.z_index
-				topmost_item = item
-	
-		if topmost_item != null:
+	if dragged_item == null && input.interact_just_pressed:
+		if hovered_item != null:
 			# acquire dragged item
-			move_item_on_top(topmost_item)
-			dragged_item = topmost_item
-			drag_offset = mouse_position - dragged_item.position
+			move_item_on_top(hovered_item)
+			dragged_item = hovered_item
+			drag_offset = input.mouse_position - dragged_item.position
 			
-	if !is_interact_down:
+	if dragged_item != null && !input.interact_down:
 		drop_dragged_item()
 		
 	if dragged_item != null:
-		dragged_item.position = mouse_position - drag_offset
-
-func notify_mouse_entered_item(item: Item):
-	assert(!hovered_items.has(item))
-	hovered_items.append(item)
-	pass
-	
-func notify_mouse_exited_item(item: Item):
-	var found = tools.remove_from_array(hovered_items, item)
-	assert(found)
+		dragged_item.position = input.mouse_position - drag_offset
 
 func move_item_on_top(item: Item):
 	var found = tools.remove_from_array(items, item)
@@ -69,9 +52,19 @@ func update_items_z():
 	for item in items:
 		item.z_index = z
 		z += 1
+		
+func register_item(item: Item):
+	assert(!items.has(item))
+	items.append(item)
+	update_items_z()
 	
-func fetch_items(node: Node, results: Array[Item]):
-	if node is Item:
-		results.push_back(node)
-	for child in node.get_children():
-		fetch_items(child, results)
+func unregister_item(item: Item):
+	var found = tools.remove_from_array(items, item)
+	assert(found)
+	update_items_z()
+	
+#func fetch_items(node: Node, results: Array[Item]):
+	#if node is Item:
+		#results.push_back(node)
+	#for child in node.get_children():
+		#fetch_items(child, results)
