@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BookData" load_steps=2 format=3 uid="uid://b45jt4s8lx8f3"]
+
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="1_45i8a"]
+
+[resource]
+script = ExtResource("1_45i8a")
+title = "La vie secrète des gènes"
+author = "Evelyne Heyer"
+year_of_publication = 1987
+in_collection = false
+return_date = 20241123
+condition = 1
+category = 0
+tags = Array[String](["Sciences", "Non-Fiction", "Medecine"])
+color = Color(6.73831e-06, 0.77133, 0.968708, 1)

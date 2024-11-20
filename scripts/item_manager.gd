@@ -6,6 +6,8 @@ var dragged_item: Item
 var drag_offset: Vector2
 var drag_enabled: bool = true
 
+signal item_dropped(item: Item)
+
 func set_drag_enabled(value: bool):
 	if value == drag_enabled: return
 	
@@ -21,8 +23,8 @@ func process(input: InputData):
 	if !drag_enabled: return
 	
 	var hovered_item: Item
-	if input.hovered_object is Item:
-		hovered_item = input.hovered_object
+	if input.topmost_hovered_object is Item:
+		hovered_item = input.topmost_hovered_object
 	
 	if dragged_item == null && input.interact_just_pressed:
 		if hovered_item != null:
@@ -44,8 +46,11 @@ func move_item_on_top(item: Item):
 	update_items_z()
 	
 func drop_dragged_item():
+	if dragged_item == null: return
+	var dropped_item = dragged_item
 	dragged_item = null
 	drag_offset = Vector2.ZERO
+	item_dropped.emit(dropped_item)
 
 func update_items_z():
 	var z = 0

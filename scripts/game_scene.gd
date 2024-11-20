@@ -4,6 +4,8 @@ class_name GameScene
 @export var animation_player: AnimationPlayer
 @export var day_text: RichTextLabel
 @export var book_box: BookBox
+@export var keep_zone: Node2D
+@export var ditch_zone: Node2D
 
 func point_cast_z_ordered(position: Vector2) -> Array[Node2D]:
 	var params: PhysicsPointQueryParameters2D = PhysicsPointQueryParameters2D.new()
