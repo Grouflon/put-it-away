@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DayData" load_steps=6 format=3 uid="uid://b3wg2xa5mewsd"]
+[gd_resource type="Resource" script_class="DayData" load_steps=7 format=3 uid="uid://b3wg2xa5mewsd"]
 
+[ext_resource type="PackedScene" uid="uid://bjeq32lnu0iav" path="res://items/flowers.tscn" id="1_asctj"]
 [ext_resource type="PackedScene" uid="uid://vrl0rj8st1pu" path="res://items/books/book3.tscn" id="1_i1kit"]
 [ext_resource type="Script" path="res://scripts/resources/rule_data.gd" id="2_37h7n"]
 [ext_resource type="Resource" uid="uid://cck6gegnih5e3" path="res://data/rules/rule2.tres" id="3_1vu7g"]
@@ -8,5 +9,5 @@
 
 [resource]
 script = ExtResource("4_neiiv")
-box_content = Array[PackedScene]([ExtResource("1_i1kit")])
+box_content = Array[PackedScene]([ExtResource("1_asctj"), ExtResource("1_i1kit")])
 rules = Array[ExtResource("2_37h7n")]([ExtResource("3_1vu7g"), ExtResource("4_4hd4y")])

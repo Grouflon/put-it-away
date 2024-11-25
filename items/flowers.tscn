@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjeq32lnu0iav"]
+
+[ext_resource type="PackedScene" uid="uid://bp1yij04a03rl" path="res://scenes/bases/item_base.tscn" id="1_bbygv"]
+[ext_resource type="Texture2D" uid="uid://cf1bdn6138c7q" path="res://textures/flowers.webp" id="2_1wjgr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_myfeo"]
+radius = 105.005
+
+[node name="Banana" instance=ExtResource("1_bbygv")]
+persist_between_days = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("2_1wjgr")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(2, -52)
+shape = SubResource("CircleShape2D_myfeo")
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_left = -55.0
+offset_top = -69.0
+offset_right = 58.0
+offset_bottom = -20.0
+text = "WORLD'S BEST
+LIBRARIAN
+"
+horizontal_alignment = 1
