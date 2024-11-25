@@ -113,14 +113,18 @@ func _process(_delta: float):
 func on_item_dropped(item: Item):
 	if input.hovered_objects.has(game_scene.keep_zone):
 		tools.remove_from_array(spawned_items, item)
-		tools.remove_from_array(spawned_books, item)
-		tools.remove_from_array(spawned_rules, item)
+		if item is Book:
+			tools.remove_from_array(spawned_books, item)
+		if item is Rule:
+			tools.remove_from_array(spawned_rules, item)
 		item.queue_free()
 		pass
 	elif input.hovered_objects.has(game_scene.ditch_zone):
 		tools.remove_from_array(spawned_items, item)
-		tools.remove_from_array(spawned_books, item)
-		tools.remove_from_array(spawned_rules, item)
+		if item is Book:
+			tools.remove_from_array(spawned_books, item)
+		if item is Rule:
+			tools.remove_from_array(spawned_rules, item)
 		item.queue_free()
 		pass
 		

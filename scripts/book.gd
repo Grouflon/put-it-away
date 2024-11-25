@@ -1,7 +1,7 @@
 extends Item
 class_name Book
 
-@export var data: BookData
+@export var start_data: BookData
 
 @export_group("layout")
 @export var background: ColorRect
@@ -11,8 +11,8 @@ class_name Book
 @export var condition: Label
 
 func _ready():
-	if data != null:
-		set_data(data)
+	if start_data != null:
+		set_data(start_data)
 
 func set_data(data: BookData):
 	if data == null:
@@ -24,8 +24,8 @@ func set_data(data: BookData):
 	date.text = str(data.year_of_publication)
 	condition.text = condition_to_string(data.condition)
 	
-func condition_to_string(condition: BookData.Condition):
-	match condition:
+func condition_to_string(book_condition: BookData.Condition):
+	match book_condition:
 		BookData.Condition.EXCELLENT: return "X"
 		BookData.Condition.GOOD: return "XX"
 		BookData.Condition.USED: return "XXX"

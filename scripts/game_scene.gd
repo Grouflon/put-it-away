@@ -7,11 +7,11 @@ class_name GameScene
 @export var keep_zone: Node2D
 @export var ditch_zone: Node2D
 
-func point_cast_z_ordered(position: Vector2) -> Array[Node2D]:
+func point_cast_z_ordered(point: Vector2) -> Array[Node2D]:
 	var params: PhysicsPointQueryParameters2D = PhysicsPointQueryParameters2D.new()
 	params.collide_with_areas = true
 	params.collide_with_bodies = true
-	params.position = position
+	params.position = point
 	var intersections = get_world_2d().direct_space_state.intersect_point(params)
 	
 	var results: Array[Node2D]

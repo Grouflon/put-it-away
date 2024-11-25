@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 core="*res://scenes/core.tscn"
 tools="*res://scenes/tools.tscn"
 
+[debug]
+
+gdscript/warnings/unsafe_cast=1
+
 [display]
 
 window/size/viewport_width=960
