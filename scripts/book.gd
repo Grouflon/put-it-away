@@ -13,7 +13,6 @@ class_name Book
 func _ready():
 	if data != null:
 		set_data(data)
-	
 
 func set_data(data: BookData):
 	if data == null:

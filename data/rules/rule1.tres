@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="RuleData" load_steps=2 format=3 uid="uid://c5vhsmkqc7g72"]
+
+[ext_resource type="Script" path="res://scripts/resources/rule_data.gd" id="1_6gns7"]
+
+[resource]
+script = ExtResource("1_6gns7")
+text = "Détruire les livres endommagés"

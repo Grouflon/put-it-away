@@ -10,6 +10,7 @@ size = Vector2(224, 73)
 size = Vector2(67, 157)
 
 [node name="Banana" instance=ExtResource("1_28ccr")]
+persist_between_days = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 scale = Vector2(0.155, 0.155)

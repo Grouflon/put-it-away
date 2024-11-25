@@ -19,6 +19,7 @@ var current_day: int
 var item_pool: Array[PackedScene]
 var spawned_items: Array[Item]
 var spawned_books: Array[Book]
+var spawned_rules: Array[Rule]
 var input: InputData
 
 func _ready() -> void:
@@ -74,8 +75,6 @@ func _process(_delta: float):
 		
 	#print(input.hovered_object)
 	
-	# Process managers
-	
 	# Process state machine
 	match game_state:
 		GameState.DAY_INTRO:
@@ -115,29 +114,63 @@ func on_item_dropped(item: Item):
 	if input.hovered_objects.has(game_scene.keep_zone):
 		tools.remove_from_array(spawned_items, item)
 		tools.remove_from_array(spawned_books, item)
+		tools.remove_from_array(spawned_rules, item)
 		item.queue_free()
 		pass
 	elif input.hovered_objects.has(game_scene.ditch_zone):
 		tools.remove_from_array(spawned_items, item)
 		tools.remove_from_array(spawned_books, item)
+		tools.remove_from_array(spawned_rules, item)
 		item.queue_free()
 		pass
+		
+func reset_game():
+	item_pool.clear()
+	for item in spawned_items:
+		item.queue_free()
+	for rule in spawned_rules:
+		rule.queue_free()
+	spawned_items.clear()
+	spawned_books.clear()
+	spawned_rules.clear()
 
 func setup_day(day_index: int):
 	assert(game_data.days.size() > day_index)
 	
 	# clear previous day
+	var kept_items: Array[Item]
 	item_pool.clear()
 	for item in spawned_items:
+		if item.persist_between_days:
+			kept_items.append(item)
+			continue
 		item.queue_free()
+	for rule in spawned_rules:
+		rule.queue_free()
 	spawned_items.clear()
+	spawned_books.clear()
+	spawned_rules.clear()
+	spawned_items.append_array(kept_items)
 	
 	# setup new day
 	current_day = day_index
-	for item_data in game_data.days[current_day].box_content:
-		item_pool.append(item_data)
-	game_scene.book_box.update_item_count(item_pool.size())
 	
+	# item box
+	for item in game_data.days[current_day].box_content:
+		if item == null: continue
+		item_pool.append(item)
+	
+	# rules
+	for rule_data in game_data.days[current_day].rules:
+		if rule_data == null: continue
+		var rule: Rule = game_data.rule_prefab.instantiate()
+		rule.set_data(rule_data)
+		game_scene.add_child(rule)
+		rule.position = Vector2(120, 20) + spawned_rules.size() * Vector2(100, 0)
+		spawned_rules.append(rule)
+	
+	# UI
+	game_scene.book_box.update_item_count(item_pool.size())
 	game_scene.day_text.text = day_format_string.format({"day": current_day + 1})
 	
 
@@ -149,5 +182,6 @@ func day_intro_animation_finished(anim_name: StringName):
 func end_animation_finished(anim_name: StringName):
 	assert(anim_name == "end")
 	game_scene.animation_player.animation_finished.disconnect(end_animation_finished)
+	reset_game()
 	setup_day(0)
 	set_state(GameState.DAY_INTRO)
