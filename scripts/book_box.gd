@@ -11,6 +11,6 @@ func initialize():
 	text_format_string = text.text
 	initialized = true
 
-func update_book_count(book_count: int):
+func update_item_count(item_count: int):
 	initialize()
-	text.text = text_format_string.format({"book_count": book_count})
+	text.text = text_format_string.format({"item_count": item_count})

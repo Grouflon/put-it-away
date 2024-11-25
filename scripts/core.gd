@@ -4,7 +4,6 @@ class_name GameCore
 # immutable stuff
 @export var game_data: GameData
 @export var item_manager: ItemManager
-@export var book_prefab: PackedScene
 var game_scene: GameScene
 var day_format_string: String
 
@@ -17,8 +16,9 @@ enum GameState
 }
 var game_state: GameState = GameState.NONE
 var current_day: int 
-var book_pool: Array[BookData]
+var item_pool: Array[PackedScene]
 var spawned_items: Array[Item]
+var spawned_books: Array[Book]
 var input: InputData
 
 func _ready() -> void:
@@ -46,7 +46,6 @@ func set_state(state: GameState):
 	# enter state
 	match game_state:
 		GameState.DAY_INTRO:
-			game_scene.day_text.text = day_format_string.format({"day": current_day + 1})
 			game_scene.animation_player.animation_finished.connect(day_intro_animation_finished)
 			game_scene.animation_player.play("day_intro")
 		
@@ -84,19 +83,23 @@ func _process(_delta: float):
 		
 		GameState.GAME:
 			if input.topmost_hovered_object is BookBox && input.interact_just_pressed:
-				if book_pool.size() > 0:
-					var book: Book = book_prefab.instantiate()
-					book.set_data(book_pool[0])
-					book_pool.remove_at(0)
-					game_scene.add_child(book)
-					book.position = Vector2(250, 220) + spawned_items.size() * Vector2(30, 30)
-					spawned_items.append(book)
-					game_scene.book_box.update_book_count(book_pool.size())
+				if item_pool.size() > 0:
+					var item = item_pool[0].instantiate()
+					item_pool.remove_at(0)
+					game_scene.add_child(item)
+					item.position = Vector2(250, 220) + spawned_items.size() * Vector2(30, 30)
+					game_scene.book_box.update_item_count(item_pool.size())
+					
+					if item is Item:
+						spawned_items.append(item)
+						
+					if item is Book:
+						spawned_books.append(item)
 					
 			
 			item_manager.process(input)
 			
-			if spawned_items.size() == 0 && book_pool.size() == 0:
+			if spawned_books.size() == 0 && item_pool.size() == 0:
 				if (current_day + 1) < game_data.days.size():
 					setup_day(current_day+1)
 					set_state(GameState.DAY_INTRO)
@@ -111,10 +114,12 @@ func _process(_delta: float):
 func on_item_dropped(item: Item):
 	if input.hovered_objects.has(game_scene.keep_zone):
 		tools.remove_from_array(spawned_items, item)
+		tools.remove_from_array(spawned_books, item)
 		item.queue_free()
 		pass
 	elif input.hovered_objects.has(game_scene.ditch_zone):
 		tools.remove_from_array(spawned_items, item)
+		tools.remove_from_array(spawned_books, item)
 		item.queue_free()
 		pass
 
@@ -122,16 +127,18 @@ func setup_day(day_index: int):
 	assert(game_data.days.size() > day_index)
 	
 	# clear previous day
-	book_pool.clear()
+	item_pool.clear()
 	for item in spawned_items:
 		item.queue_free()
 	spawned_items.clear()
 	
 	# setup new day
 	current_day = day_index
-	for book_data in game_data.days[current_day].books:
-		book_pool.append(book_data)
-	game_scene.book_box.update_book_count(book_pool.size())
+	for item_data in game_data.days[current_day].box_content:
+		item_pool.append(item_data)
+	game_scene.book_box.update_item_count(item_pool.size())
+	
+	game_scene.day_text.text = day_format_string.format({"day": current_day + 1})
 	
 
 func day_intro_animation_finished(anim_name: StringName):

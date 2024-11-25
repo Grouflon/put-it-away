@@ -1,9 +1,8 @@
-[gd_resource type="Resource" script_class="DayData" load_steps=4 format=3 uid="uid://b3wg2xa5mewsd"]
+[gd_resource type="Resource" script_class="DayData" load_steps=3 format=3 uid="uid://b3wg2xa5mewsd"]
 
-[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="1_a4jh8"]
-[ext_resource type="Resource" uid="uid://b45jt4s8lx8f3" path="res://data/books/test_book3.tres" id="2_nynkc"]
+[ext_resource type="PackedScene" uid="uid://vrl0rj8st1pu" path="res://scenes/items/books/book3.tscn" id="1_i1kit"]
 [ext_resource type="Script" path="res://scripts/resources/day_data.gd" id="4_neiiv"]
 
 [resource]
 script = ExtResource("4_neiiv")
-books = Array[ExtResource("1_a4jh8")]([ExtResource("2_nynkc")])
+box_content = Array[PackedScene]([ExtResource("1_i1kit")])

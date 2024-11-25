@@ -1,6 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhp81niqmvvrt"]
+[gd_scene load_steps=7 format=3 uid="uid://dhp81niqmvvrt"]
 
-[ext_resource type="Script" path="res://scripts/book.gd" id="1_5un4a"]
+[ext_resource type="Script" path="res://scripts/book.gd" id="1_xf1tl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yxv88"]
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_v17x1"]
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_iaclt"]
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_yraj5"]
+font_size = 10
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_icx4e"]
 size = Vector2(280, 400)
@@ -8,7 +20,7 @@ size = Vector2(280, 400)
 [node name="Book" type="Node2D" node_paths=PackedStringArray("background", "title", "author", "date", "condition")]
 position = Vector2(669, 423)
 scale = Vector2(0.7, 0.7)
-script = ExtResource("1_5un4a")
+script = ExtResource("1_xf1tl")
 background = NodePath("ColorRect")
 title = NodePath("ColorRect/Title")
 author = NodePath("ColorRect/Author")
@@ -30,7 +42,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.412152, 0.412152, 0.412152, 1)
 
-[node name="Title" type="RichTextLabel" parent="ColorRect"]
+[node name="Title" type="Label" parent="ColorRect"]
 custom_minimum_size = Vector2(0, 26.225)
 layout_mode = 1
 anchors_preset = 14
@@ -38,17 +50,16 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_top = -141.0
-offset_bottom = -94.0
+offset_bottom = -92.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-bbcode_enabled = true
-text = "[font_size=35][center]{title}"
-fit_content = true
-scroll_active = false
-shortcut_keys_enabled = false
+text = "{title}"
+label_settings = SubResource("LabelSettings_yxv88")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="Author" type="RichTextLabel" parent="ColorRect"]
+[node name="Author" type="Label" parent="ColorRect"]
 custom_minimum_size = Vector2(0, 26.225)
 layout_mode = 1
 anchors_preset = 14
@@ -59,13 +70,11 @@ offset_top = 131.0
 offset_bottom = 157.225
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-bbcode_enabled = true
-text = "[font_size=12][center]{author}"
-scroll_active = false
-shortcut_keys_enabled = false
+text = "{author}"
+label_settings = SubResource("LabelSettings_v17x1")
+horizontal_alignment = 1
 
-[node name="Date" type="RichTextLabel" parent="ColorRect"]
+[node name="Date" type="Label" parent="ColorRect"]
 custom_minimum_size = Vector2(0, 26.225)
 layout_mode = 1
 anchors_preset = 14
@@ -76,28 +85,24 @@ offset_top = 147.0
 offset_bottom = 173.225
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-bbcode_enabled = true
-text = "[font_size=12][center][i]{date}"
-scroll_active = false
-shortcut_keys_enabled = false
+text = "{date}"
+label_settings = SubResource("LabelSettings_iaclt")
+horizontal_alignment = 1
 
-[node name="Condition" type="RichTextLabel" parent="ColorRect"]
+[node name="Condition" type="Label" parent="ColorRect"]
 custom_minimum_size = Vector2(0, 10.195)
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = 185.0
-offset_bottom = 201.0
+offset_top = 181.5
+offset_bottom = 204.5
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-bbcode_enabled = true
-text = "[font_size=10][right]{condition}"
-scroll_active = false
-shortcut_keys_enabled = false
+text = "{condition}"
+label_settings = SubResource("LabelSettings_yraj5")
+horizontal_alignment = 2
 
 [node name="Area2D" type="Area2D" parent="."]
 

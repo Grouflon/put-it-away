@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="put-it-away"
-run/main_scene="res://nodes/scenes/game.tscn"
+run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-core="*res://nodes/core.tscn"
-tools="*res://nodes/tools.tscn"
+core="*res://scenes/core.tscn"
+tools="*res://scenes/tools.tscn"
 
 [display]
 
