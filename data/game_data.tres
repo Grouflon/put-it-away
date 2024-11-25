@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/resources/game_data.gd" id="1_ifvuy"]
 [ext_resource type="Resource" uid="uid://co33rdifn8cy6" path="res://data/days/day1.tres" id="2_5ty5n"]
 [ext_resource type="Resource" uid="uid://b3wg2xa5mewsd" path="res://data/days/day2.tres" id="3_2gtou"]
-[ext_resource type="PackedScene" uid="uid://cujbia1rgtqmm" path="res://scenes/items/_bases/rule_base.tscn" id="4_skul2"]
+[ext_resource type="PackedScene" uid="uid://cujbia1rgtqmm" path="res://scenes/bases/rule_base.tscn" id="4_skul2"]
 
 [resource]
 script = ExtResource("1_ifvuy")

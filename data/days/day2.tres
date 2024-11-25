@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DayData" load_steps=6 format=3 uid="uid://b3wg2xa5mewsd"]
 
-[ext_resource type="PackedScene" uid="uid://vrl0rj8st1pu" path="res://scenes/items/books/book3.tscn" id="1_i1kit"]
+[ext_resource type="PackedScene" uid="uid://vrl0rj8st1pu" path="res://items/books/book3.tscn" id="1_i1kit"]
 [ext_resource type="Script" path="res://scripts/resources/rule_data.gd" id="2_37h7n"]
 [ext_resource type="Resource" uid="uid://cck6gegnih5e3" path="res://data/rules/rule2.tres" id="3_1vu7g"]
 [ext_resource type="Resource" uid="uid://wtog57sev4ib" path="res://data/rules/rule3.tres" id="4_4hd4y"]

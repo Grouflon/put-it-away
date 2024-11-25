@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bsnf8epar3p2y"]
 
-[ext_resource type="PackedScene" uid="uid://bp1yij04a03rl" path="res://scenes/items/_bases/item_base.tscn" id="1_28ccr"]
-[ext_resource type="Texture2D" uid="uid://bjcayw3web5wt" path="res://textures/banana.webp" id="2_dvq7j"]
+[ext_resource type="PackedScene" uid="uid://bp1yij04a03rl" path="res://scenes/bases/item_base.tscn" id="1_jdfvr"]
+[ext_resource type="Texture2D" uid="uid://bjcayw3web5wt" path="res://textures/banana.webp" id="2_ilq6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfl05"]
 size = Vector2(224, 73)
@@ -9,12 +9,12 @@ size = Vector2(224, 73)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31pvp"]
 size = Vector2(67, 157)
 
-[node name="Banana" instance=ExtResource("1_28ccr")]
+[node name="Banana" instance=ExtResource("1_jdfvr")]
 persist_between_days = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 scale = Vector2(0.155, 0.155)
-texture = ExtResource("2_dvq7j")
+texture = ExtResource("2_ilq6o")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(25, 44)
