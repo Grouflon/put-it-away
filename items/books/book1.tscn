@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_icec2"]
 [ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_wyk3c"]
 
-[sub_resource type="Resource" id="Resource_u2bjx"]
+[sub_resource type="Resource" id="Resource_x3ge3"]
 script = ExtResource("2_wyk3c")
 title = "Le monde de Rocannon T.1"
 author = "Ursula K. Le Guin"
@@ -16,4 +16,4 @@ tags = Array[String](["SF", "Fiction", "afsf"])
 color = Color(0.919281, 4.47616e-06, 1.15514e-06, 1)
 
 [node name="Book" instance=ExtResource("1_icec2")]
-start_data = SubResource("Resource_u2bjx")
+data = SubResource("Resource_x3ge3")

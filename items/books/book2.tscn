@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_efk2n"]
 [ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_ktqnd"]
 
-[sub_resource type="Resource" id="Resource_7hlc8"]
+[sub_resource type="Resource" id="Resource_evi85"]
 script = ExtResource("2_ktqnd")
 title = "Triceratops and Bottoms"
 author = "Lola Faust"
@@ -16,4 +16,4 @@ tags = Array[String](["SF", "Fiction", "VO"])
 color = Color(0.950469, 0.480372, 1, 1)
 
 [node name="Book" instance=ExtResource("1_efk2n")]
-start_data = SubResource("Resource_7hlc8")
+data = SubResource("Resource_evi85")

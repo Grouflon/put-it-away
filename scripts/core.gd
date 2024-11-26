@@ -20,6 +20,12 @@ var item_pool: Array[PackedScene]
 var spawned_items: Array[Item]
 var spawned_books: Array[Book]
 var spawned_rules: Array[Rule]
+
+var today_kept_items: Array[Item]
+var today_thrown_items: Array[Item]
+var kept_items: Array[Item]
+var thrown_items: Array[Item]
+
 var input: InputData
 
 func _ready() -> void:
@@ -100,6 +106,23 @@ func _process(_delta: float):
 			
 			if spawned_books.size() == 0 && item_pool.size() == 0:
 				if (current_day + 1) < game_data.days.size():
+					
+					var comments_pool: Array[GDScript]
+					comments_pool.append_array(game_data.global_comments)
+					comments_pool.append_array(game_data.days[current_day].comments)
+					
+					for comment in comments_pool:
+						var n = Node.new()
+						n.set_script(comment)
+						var comment_script: CommentScript = n as CommentScript
+						if comment_script != null:
+							if comment_script.can_show_comment():
+								print("{0}: {1}".format([
+									comment_script.get_comment_author(),
+									comment_script.get_comment_body(),
+								]))
+						n.queue_free()
+					
 					setup_day(current_day+1)
 					set_state(GameState.DAY_INTRO)
 				else:
@@ -117,7 +140,10 @@ func on_item_dropped(item: Item):
 			tools.remove_from_array(spawned_books, item)
 		if item is Rule:
 			tools.remove_from_array(spawned_rules, item)
-		item.queue_free()
+			
+		today_kept_items.append(item)
+		kept_items.append(item)
+		item.get_parent().remove_child(item)
 		pass
 	elif input.hovered_objects.has(game_scene.ditch_zone):
 		tools.remove_from_array(spawned_items, item)
@@ -125,7 +151,10 @@ func on_item_dropped(item: Item):
 			tools.remove_from_array(spawned_books, item)
 		if item is Rule:
 			tools.remove_from_array(spawned_rules, item)
-		item.queue_free()
+		
+		today_thrown_items.append(item)
+		thrown_items.append(item)	
+		item.get_parent().remove_child(item)
 		pass
 		
 func reset_game():
@@ -134,19 +163,26 @@ func reset_game():
 		item.queue_free()
 	for rule in spawned_rules:
 		rule.queue_free()
+	for item in kept_items:
+		item.queue_free()
+	for item in thrown_items:
+		item.queue_free()
+		
 	spawned_items.clear()
 	spawned_books.clear()
 	spawned_rules.clear()
+	kept_items.clear()
+	thrown_items.clear()
 
 func setup_day(day_index: int):
 	assert(game_data.days.size() > day_index)
 	
 	# clear previous day
-	var kept_items: Array[Item]
+	var persistent_items: Array[Item]
 	item_pool.clear()
 	for item in spawned_items:
 		if item.persist_between_days:
-			kept_items.append(item)
+			persistent_items.append(item)
 			continue
 		item.queue_free()
 	for rule in spawned_rules:
@@ -154,7 +190,9 @@ func setup_day(day_index: int):
 	spawned_items.clear()
 	spawned_books.clear()
 	spawned_rules.clear()
-	spawned_items.append_array(kept_items)
+	today_kept_items.clear()
+	today_thrown_items.clear()
+	spawned_items.append_array(persistent_items)
 	
 	# setup new day
 	current_day = day_index

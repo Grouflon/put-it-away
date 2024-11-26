@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_lw5nj"]
 [ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_x5bhb"]
 
-[sub_resource type="Resource" id="Resource_yar57"]
+[sub_resource type="Resource" id="Resource_eteic"]
 script = ExtResource("2_x5bhb")
 title = "La vie secrète des gènes"
 author = "Evelyne Heyer"
@@ -16,4 +16,4 @@ tags = Array[String](["Sciences", "Non-Fiction", "Medecine"])
 color = Color(6.73831e-06, 0.77133, 0.968708, 1)
 
 [node name="Book" instance=ExtResource("1_lw5nj")]
-start_data = SubResource("Resource_yar57")
+data = SubResource("Resource_eteic")
