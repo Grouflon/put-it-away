@@ -1,0 +1,133 @@
+[gd_scene load_steps=19 format=3 uid="uid://d1h7e6u52do36"]
+
+[ext_resource type="Texture2D" uid="uid://3f3wpkucbw7e" path="res://textures/Book_A_PIA_PH_001.png" id="1_8rydm"]
+[ext_resource type="Texture2D" uid="uid://dfkcvxl58oy03" path="res://textures/Book_B_PIA_PH_001.png" id="2_py4ic"]
+[ext_resource type="Texture2D" uid="uid://c5q8cgl5fvea2" path="res://textures/Cursor_A_PIA_PH_001.png" id="3_n8exu"]
+[ext_resource type="Texture2D" uid="uid://b8smqenc2yo3c" path="res://textures/DonBox_A_PIA_PH_001.png" id="4_fb0ni"]
+[ext_resource type="Texture2D" uid="uid://5ef64xbosehu" path="res://textures/DonBox_B_PIA_PH_001.png" id="5_5nk0o"]
+[ext_resource type="Texture2D" uid="uid://bmxmxblcbpguo" path="res://textures/Memo_A_PIA_PH_001.png" id="6_swo1i"]
+[ext_resource type="Texture2D" uid="uid://uuaiwgv3ur0l" path="res://textures/Memo_B_PIA_PH_001.png" id="7_0m8s8"]
+[ext_resource type="Texture2D" uid="uid://cj0516561myqk" path="res://textures/Memo_C_PIA_PH_001.png" id="8_awuyx"]
+[ext_resource type="Texture2D" uid="uid://cmsjkqhyoji5g" path="res://textures/Memo_D_PIA_PH_001.png" id="9_koy7m"]
+[ext_resource type="Texture2D" uid="uid://ci7seypjew4xa" path="res://textures/Memo_E_PIA_PH_001.png" id="10_s4tgt"]
+[ext_resource type="Texture2D" uid="uid://dts4drqthm30x" path="res://textures/Memo_F_PIA_PH_001.png" id="11_2b1o6"]
+[ext_resource type="Texture2D" uid="uid://bg56ljgp2m08k" path="res://textures/Scan_A_FX1_PIA_PH_001.png" id="12_60x4d"]
+[ext_resource type="Texture2D" uid="uid://0mxhto5ubytg" path="res://textures/Scan_A_PIA_PH_001.png" id="13_bixd4"]
+[ext_resource type="Texture2D" uid="uid://qi74e5dnk0qt" path="res://textures/Tablet_A_PIA_PH_001.png" id="14_m4drx"]
+[ext_resource type="Texture2D" uid="uid://do2bl8oneq1w0" path="res://textures/Background_A_PIA_PH_001.png" id="15_baxus"]
+[ext_resource type="Texture2D" uid="uid://cr8fnidxojqap" path="res://textures/Cart_A_PIA_PH_001.png" id="16_bd7xq"]
+[ext_resource type="Texture2D" uid="uid://ccpswtis5rpcm" path="res://textures/Shredder_A_PIA_PH_001.png" id="17_ux3o1"]
+[ext_resource type="Texture2D" uid="uid://ud3vkift5k8c" path="res://textures/Background_B_PIA_PH_001.png" id="18_3g1ao"]
+
+[node name="Mockup" type="Node2D"]
+position = Vector2(727, 342)
+scale = Vector2(0.578, 0.578)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BookAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(1153, 721)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("1_8rydm")
+
+[node name="BookBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(617, 814)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("2_py4ic")
+
+[node name="CursorAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
+position = Vector2(930, 529)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("3_n8exu")
+
+[node name="DonBoxAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(105.067, 539.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("4_fb0ni")
+
+[node name="DonBoxBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(105.067, 539.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("5_5nk0o")
+
+[node name="MemoAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(350.778, 195.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("6_swo1i")
+
+[node name="MemoBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(454.778, 331.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("7_0m8s8")
+
+[node name="MemoCPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(262.778, 115.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("8_awuyx")
+
+[node name="MemoDPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(654.778, 323.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("9_koy7m")
+
+[node name="MemoEPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(454.778, 155.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("10_s4tgt")
+
+[node name="MemoFPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(558.778, 195.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("11_2b1o6")
+
+[node name="ScanAFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(1452.64, 849.322)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("12_60x4d")
+
+[node name="ScanAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(1452.64, 849.322)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("13_bixd4")
+
+[node name="TabletAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(1278, 215)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("14_m4drx")
+
+[node name="BackgroundAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(809, 539.676)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("15_baxus")
+
+[node name="CartAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = -1
+position = Vector2(1748, 276)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("16_bd7xq")
+
+[node name="ShredderAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = -1
+position = Vector2(1746, 816)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("17_ux3o1")
+
+[node name="BackgroundBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = -2
+position = Vector2(1763, 537)
+scale = Vector2(0.334084, 0.334084)
+texture = ExtResource("18_3g1ao")
