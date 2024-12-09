@@ -1,11 +1,14 @@
 extends Node
 class_name CommentScript
 
-func can_show_comment() -> bool:
+func is_valid() -> bool:
 	return false
 
-func get_comment_body() -> String:
+func get_avatar() -> Texture2D:
+	return null
+
+func get_body() -> String:
 	return ""
 
-func get_comment_author() -> String:
+func get_author() -> String:
 	return ""

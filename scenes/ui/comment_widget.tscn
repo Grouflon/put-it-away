@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxeghptxwmgcv"]
+
+[ext_resource type="Script" path="res://scripts/ui/comment_widget.gd" id="1_es0ba"]
+[ext_resource type="Texture2D" uid="uid://bmduke3x2bnw1" path="res://icon.svg" id="1_vo6xh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjlqd"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0.386341, 0.40257, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_7b56l"]
+font_color = Color(0, 1, 1, 1)
+
+[node name="Comment" type="PanelContainer" node_paths=PackedStringArray("avatar", "author_label", "comment_label")]
+offset_right = 500.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bjlqd")
+script = ExtResource("1_es0ba")
+avatar = NodePath("HBoxContainer/Avatar")
+author_label = NodePath("HBoxContainer/Control/Author")
+comment_label = NodePath("HBoxContainer/Control/Comment")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Avatar" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_vo6xh")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Author" type="Label" parent="HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "@le_maire"
+label_settings = SubResource("LabelSettings_7b56l")
+
+[node name="Comment" type="Label" parent="HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+text = "Bibliothèque de wokiste, je vais couper les subventions"
+autowrap_mode = 3

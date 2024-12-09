@@ -6,6 +6,7 @@ class_name GameScene
 @export var book_box: BookBox
 @export var keep_zone: Node2D
 @export var ditch_zone: Node2D
+@export var comments_panel: CommentsPanel
 
 func point_cast_z_ordered(point: Vector2) -> Array[Node2D]:
 	var params: PhysicsPointQueryParameters2D = PhysicsPointQueryParameters2D.new()

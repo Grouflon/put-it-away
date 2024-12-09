@@ -20,15 +20,13 @@ config/icon="res://icon.svg"
 core="*res://scenes/core.tscn"
 tools="*res://scenes/tools.tscn"
 
-[debug]
-
-gdscript/warnings/unsafe_cast=1
-
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="viewport"
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
 
 [input]
 

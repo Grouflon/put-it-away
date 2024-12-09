@@ -3,19 +3,19 @@
 [ext_resource type="Script" path="res://scripts/book.gd" id="1_xf1tl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yxv88"]
-font_size = 35
+font_size = 60
 
 [sub_resource type="LabelSettings" id="LabelSettings_v17x1"]
-font_size = 12
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_iaclt"]
-font_size = 12
+font_size = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_yraj5"]
-font_size = 10
+font_size = 20
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_icx4e"]
-size = Vector2(280, 400)
+size = Vector2(560, 800)
 
 [node name="Book" type="Node2D" node_paths=PackedStringArray("background", "title", "author", "date", "condition")]
 position = Vector2(669, 423)
@@ -33,10 +33,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -140.0
-offset_top = -200.0
-offset_right = 140.0
-offset_bottom = 200.0
+offset_right = 560.0
+offset_bottom = 800.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -62,14 +60,14 @@ autowrap_mode = 3
 [node name="Author" type="Label" parent="ColorRect"]
 custom_minimum_size = Vector2(0, 26.225)
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = -1
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = 131.0
-offset_bottom = 157.225
+anchor_bottom = 1.0
+offset_top = -217.143
+offset_bottom = -175.143
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 text = "{author}"
 label_settings = SubResource("LabelSettings_v17x1")
 horizontal_alignment = 1
@@ -77,14 +75,14 @@ horizontal_alignment = 1
 [node name="Date" type="Label" parent="ColorRect"]
 custom_minimum_size = Vector2(0, 26.225)
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = -1
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = 147.0
-offset_bottom = 173.225
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -140.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 text = "{date}"
 label_settings = SubResource("LabelSettings_iaclt")
 horizontal_alignment = 1
@@ -92,14 +90,13 @@ horizontal_alignment = 1
 [node name="Condition" type="Label" parent="ColorRect"]
 custom_minimum_size = Vector2(0, 10.195)
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = 181.5
-offset_bottom = 204.5
+anchor_bottom = 1.0
+offset_top = -28.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 text = "{condition}"
 label_settings = SubResource("LabelSettings_yraj5")
 horizontal_alignment = 2
@@ -107,4 +104,5 @@ horizontal_alignment = 2
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(280, 400)
 shape = SubResource("RectangleShape2D_icx4e")

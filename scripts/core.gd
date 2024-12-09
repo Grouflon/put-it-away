@@ -12,6 +12,7 @@ enum GameState
 	NONE,
 	DAY_INTRO,
 	GAME,
+	COMMENTS,
 	END,
 }
 var game_state: GameState = GameState.NONE
@@ -33,6 +34,8 @@ func _ready() -> void:
 	assert(game_scene != null)
 	day_format_string = game_scene.day_text.text
 	
+	game_scene.comments_panel.visible = false
+	
 	item_manager.item_dropped.connect(on_item_dropped)
 	item_manager.initialize()
 	
@@ -47,6 +50,11 @@ func set_state(state: GameState):
 		
 		GameState.GAME:
 			pass
+			
+		GameState.COMMENTS:
+			game_scene.comments_panel.panel_closed.disconnect(on_comment_panel_closed)
+			game_scene.comments_panel.visible = false
+			pass
 	
 	game_state = state
 	
@@ -57,6 +65,34 @@ func set_state(state: GameState):
 			game_scene.animation_player.play("day_intro")
 		
 		GameState.GAME:
+			pass
+			
+		GameState.COMMENTS:
+			game_scene.comments_panel.begin_comment_fill()
+			
+			var comments_pool: Array[CommentData]
+			comments_pool.append_array(game_data.global_comments)
+			comments_pool.append_array(game_data.days[current_day].comments)
+			
+			for comment_data in comments_pool:
+				if comment_data == null: continue
+				
+				var n = Node.new()
+				n.set_script(comment_data.comment_script)
+				var comment_script: = n as CommentScript
+				if !comment_data.is_valid(comment_script): continue
+
+				var avatar = comment_data.get_avatar(comment_script)
+				var author = comment_data.get_author(comment_script)
+				var body = comment_data.get_body(comment_script)
+				game_scene.comments_panel.add_comment(avatar, author, body)
+		
+				n.queue_free()
+			
+			game_scene.comments_panel.end_comment_fill()
+			
+			game_scene.comments_panel.visible = true
+			game_scene.comments_panel.panel_closed.connect(on_comment_panel_closed)
 			pass
 			
 		GameState.END:
@@ -105,29 +141,7 @@ func _process(_delta: float):
 			item_manager.process(input)
 			
 			if spawned_books.size() == 0 && item_pool.size() == 0:
-				if (current_day + 1) < game_data.days.size():
-					
-					var comments_pool: Array[GDScript]
-					comments_pool.append_array(game_data.global_comments)
-					comments_pool.append_array(game_data.days[current_day].comments)
-					
-					for comment in comments_pool:
-						var n = Node.new()
-						n.set_script(comment)
-						var comment_script: CommentScript = n as CommentScript
-						if comment_script != null:
-							if comment_script.can_show_comment():
-								print("{0}: {1}".format([
-									comment_script.get_comment_author(),
-									comment_script.get_comment_body(),
-								]))
-						n.queue_free()
-					
-					setup_day(current_day+1)
-					set_state(GameState.DAY_INTRO)
-				else:
-					set_state(GameState.END)
-					pass
+				set_state(GameState.COMMENTS)
 			pass
 			
 		GameState.END:
@@ -156,6 +170,15 @@ func on_item_dropped(item: Item):
 		thrown_items.append(item)	
 		item.get_parent().remove_child(item)
 		pass
+		
+func on_comment_panel_closed():
+	if (current_day + 1) < game_data.days.size():
+		setup_day(current_day+1)
+		set_state(GameState.DAY_INTRO)
+	else:
+		set_state(GameState.END)
+		pass
+	
 		
 func reset_game():
 	item_pool.clear()
@@ -208,7 +231,7 @@ func setup_day(day_index: int):
 		var rule: Rule = game_data.rule_prefab.instantiate()
 		rule.set_data(rule_data)
 		game_scene.add_child(rule)
-		rule.position = Vector2(120, 20) + spawned_rules.size() * Vector2(100, 0)
+		rule.position = Vector2(120, 20) + spawned_rules.size() * Vector2(215, 0)
 		spawned_rules.append(rule)
 	
 	# UI
