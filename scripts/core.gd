@@ -26,6 +26,8 @@ var today_kept_items: Array[Item]
 var today_thrown_items: Array[Item]
 var kept_items: Array[Item]
 var thrown_items: Array[Item]
+var today_followed_rules: Array[RuleData]
+var today_broken_rules: Array[RuleData]
 
 var input: InputData
 
@@ -141,6 +143,7 @@ func _process(_delta: float):
 			item_manager.process(input)
 			
 			if spawned_books.size() == 0 && item_pool.size() == 0:
+				check_rules()
 				set_state(GameState.COMMENTS)
 			pass
 			
@@ -179,6 +182,17 @@ func on_comment_panel_closed():
 		set_state(GameState.END)
 		pass
 	
+func check_rules():
+	for rule_data in game_data.days[current_day].rules:
+		if rule_data == null: continue
+		if rule_data.rule_script != null:
+			var n = Node.new()
+			n.set_script(rule_data.rule_script)
+			var rule_script: = n as RuleScript
+			if rule_script != null && !rule_script.check_rule():
+				today_broken_rules.append(rule_data)
+				continue
+		today_followed_rules.append(rule_data)
 		
 func reset_game():
 	item_pool.clear()
@@ -196,6 +210,8 @@ func reset_game():
 	spawned_rules.clear()
 	kept_items.clear()
 	thrown_items.clear()
+	today_followed_rules.clear()
+	today_broken_rules.clear()
 
 func setup_day(day_index: int):
 	assert(game_data.days.size() > day_index)
@@ -216,6 +232,8 @@ func setup_day(day_index: int):
 	today_kept_items.clear()
 	today_thrown_items.clear()
 	spawned_items.append_array(persistent_items)
+	today_followed_rules.clear()
+	today_broken_rules.clear()
 	
 	# setup new day
 	current_day = day_index

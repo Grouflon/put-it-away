@@ -7,7 +7,7 @@
 script = ExtResource("2_qpb8x")
 title = "Le nom de la rose "
 author = "Umberto Eco"
-year_of_publication = 1956
+year_of_publication = 1932
 in_collection = true
 return_date = 20241123
 condition = 1

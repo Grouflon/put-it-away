@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="RuleData" load_steps=2 format=3 uid="uid://cck6gegnih5e3"]
+[gd_resource type="Resource" script_class="RuleData" load_steps=3 format=3 uid="uid://cck6gegnih5e3"]
 
 [ext_resource type="Script" path="res://scripts/resources/rule_data.gd" id="1_80wss"]
+[ext_resource type="Script" path="res://game_scripts/rules/rulescript_after1945.gd" id="1_kahoa"]
 
 [resource]
 script = ExtResource("1_80wss")
 text = "Uniquement des livres après 1945"
+rule_script = ExtResource("1_kahoa")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CommentData" load_steps=3 format=3 uid="uid://ldg10700q2dd"]
 
 [ext_resource type="Script" path="res://scripts/resources/comment_data.gd" id="1_fuqf4"]
-[ext_resource type="Script" path="res://game_scripts/comments/script_damaged_book.gd" id="1_rjfka"]
+[ext_resource type="Script" path="res://game_scripts/comments/commentscript_damaged_book.gd" id="1_rjfka"]
 
 [resource]
 script = ExtResource("1_fuqf4")
