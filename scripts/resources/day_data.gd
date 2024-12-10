@@ -2,5 +2,5 @@ extends Resource
 class_name DayData
 
 @export var box_content: Array[PackedScene]
-@export var rules: Array[RuleData]
-@export var comments: Array[CommentData]
+@export var rules: Array[GDScript]
+@export var comments: Array[GDScript]

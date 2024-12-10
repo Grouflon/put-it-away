@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="CommentData" load_steps=2 format=3 uid="uid://df6t5qhvg3f42"]
-
-[ext_resource type="Script" path="res://scripts/resources/comment_data.gd" id="2_grgu4"]
-
-[resource]
-script = ExtResource("2_grgu4")
-author = "@michel"
-body = "J'adore ce que vous faites"

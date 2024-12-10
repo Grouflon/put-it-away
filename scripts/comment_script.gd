@@ -1,7 +1,7 @@
 extends Node
 class_name CommentScript
 
-func is_valid() -> bool:
+func is_valid(_day_result: DayResult) -> bool:
 	return false
 
 func get_avatar() -> Texture2D:

@@ -9,11 +9,11 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwsfl"]
 size = Vector2(200, 200)
 
-[node name="Rule" type="Node2D" node_paths=PackedStringArray("text", "background")]
+[node name="Rule" type="Node2D" node_paths=PackedStringArray("text_label", "background")]
 position = Vector2(130, 59)
 script = ExtResource("1_nf143")
 colors = Array[Color]([Color(1, 0.638353, 0.762806, 1), Color(0.961957, 0.865674, 0.624162, 1), Color(0.490761, 0.626225, 0.980987, 1)])
-text = NodePath("ColorRect/Label")
+text_label = NodePath("ColorRect/Label")
 background = NodePath("ColorRect")
 
 [node name="ColorRect" type="ColorRect" parent="."]

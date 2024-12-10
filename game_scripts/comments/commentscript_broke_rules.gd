@@ -6,16 +6,15 @@ enum Severity
 	LIGHT,
 	HEAVY
 }
-
 var severity: Severity = Severity.NONE
 
-func is_valid() -> bool:
+func is_valid(day_result: DayResult) -> bool:
 	
-	if core.today_broken_rules.size() >= 3:
+	if day_result.today_broken_rules >= 3:
 		severity = Severity.HEAVY
 		return true
 		
-	if core.today_broken_rules.size() >= 1:
+	if day_result.today_broken_rules >= 1:
 		severity = Severity.LIGHT
 		return true
 
