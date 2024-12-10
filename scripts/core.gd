@@ -237,7 +237,10 @@ func setup_day(day_index: int):
 		item_pool.append(item)
 	
 	# rules
-	for rule in game_data.days[current_day].rules:
+	var rules_pool: Array[GDScript]
+	rules_pool.append_array(game_data.global_rules)
+	rules_pool.append_array(game_data.days[current_day].rules)
+	for rule in rules_pool:
 		if rule == null: continue
 		
 		var n = Node.new()
