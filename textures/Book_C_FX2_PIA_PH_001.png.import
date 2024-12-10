@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3f3wpkucbw7e"
-path="res://.godot/imported/Book_A_PIA_PH_001.png-4c9d4b53824d46b43e51545f52419f9a.ctex"
+uid="uid://dqgm7eacii4pp"
+path="res://.godot/imported/Book_C_FX2_PIA_PH_001.png-c8b0632e2d52d915242bd4fe53421fcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Book_A_PIA_PH_001.png"
-dest_files=["res://.godot/imported/Book_A_PIA_PH_001.png-4c9d4b53824d46b43e51545f52419f9a.ctex"]
+source_file="res://textures/Book_C_FX2_PIA_PH_001.png"
+dest_files=["res://.godot/imported/Book_C_FX2_PIA_PH_001.png-c8b0632e2d52d915242bd4fe53421fcf.ctex"]
 
 [params]
 

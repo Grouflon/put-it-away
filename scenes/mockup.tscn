@@ -1,15 +1,22 @@
-[gd_scene load_steps=33 format=3 uid="uid://crvpdvcdky4gl"]
+[gd_scene load_steps=39 format=3 uid="uid://crvpdvcdky4gl"]
 
-[ext_resource type="Texture2D" uid="uid://dfkcvxl58oy03" path="res://textures/Book_B_PIA_PH_001.png" id="2_py4ic"]
 [ext_resource type="Texture2D" uid="uid://b8smqenc2yo3c" path="res://textures/DonBox_A_PIA_PH_001.png" id="4_fb0ni"]
 [ext_resource type="Texture2D" uid="uid://5ef64xbosehu" path="res://textures/DonBox_B_PIA_PH_001.png" id="5_5nk0o"]
+[ext_resource type="Texture2D" uid="uid://bpdoras404m1i" path="res://textures/Book_B_FX1_PIA_PH_001.png" id="5_gbbkh"]
+[ext_resource type="Texture2D" uid="uid://c8xev2eu6jdgf" path="res://textures/Book_B_FX2_PIA_PH_001.png" id="6_cj2ue"]
 [ext_resource type="Texture2D" uid="uid://bmxmxblcbpguo" path="res://textures/Memo_A_PIA_PH_001.png" id="6_swo1i"]
 [ext_resource type="Texture2D" uid="uid://uuaiwgv3ur0l" path="res://textures/Memo_B_PIA_PH_001.png" id="7_0m8s8"]
+[ext_resource type="Texture2D" uid="uid://ds8s2501ebdxb" path="res://textures/Book_B_FX3_PIA_PH_001.png" id="7_w4jox"]
 [ext_resource type="Texture2D" uid="uid://cj0516561myqk" path="res://textures/Memo_C_PIA_PH_001.png" id="8_awuyx"]
+[ext_resource type="Texture2D" uid="uid://dubl8l2pgui0y" path="res://textures/Book_B_PIA_PH_002.png" id="8_c1yqw"]
+[ext_resource type="Texture2D" uid="uid://b2jc3j6k5j68d" path="res://textures/Book_C_FX1_PIA_PH_001.png" id="9_cepqr"]
 [ext_resource type="Texture2D" uid="uid://cmsjkqhyoji5g" path="res://textures/Memo_D_PIA_PH_001.png" id="9_koy7m"]
+[ext_resource type="Texture2D" uid="uid://dqgm7eacii4pp" path="res://textures/Book_C_FX2_PIA_PH_001.png" id="10_7u3ka"]
 [ext_resource type="Texture2D" uid="uid://ci7seypjew4xa" path="res://textures/Memo_E_PIA_PH_001.png" id="10_s4tgt"]
 [ext_resource type="Texture2D" uid="uid://dts4drqthm30x" path="res://textures/Memo_F_PIA_PH_001.png" id="11_2b1o6"]
+[ext_resource type="Texture2D" uid="uid://drtagx25hmmb8" path="res://textures/Book_C_FX3_PIA_PH_001.png" id="11_eqtju"]
 [ext_resource type="Texture2D" uid="uid://bg56ljgp2m08k" path="res://textures/Scan_A_FX1_PIA_PH_001.png" id="12_60x4d"]
+[ext_resource type="Texture2D" uid="uid://c8j03w5bh40c2" path="res://textures/Book_C_PIA_PH_002.png" id="12_weoj3"]
 [ext_resource type="Texture2D" uid="uid://0mxhto5ubytg" path="res://textures/Scan_A_PIA_PH_001.png" id="13_bixd4"]
 [ext_resource type="Texture2D" uid="uid://qi74e5dnk0qt" path="res://textures/Tablet_A_PIA_PH_001.png" id="14_m4drx"]
 [ext_resource type="Texture2D" uid="uid://do2bl8oneq1w0" path="res://textures/Background_A_PIA_PH_001.png" id="15_baxus"]
@@ -22,7 +29,6 @@
 [ext_resource type="Texture2D" uid="uid://bskip4ee8i4i6" path="res://textures/Book_A_FX2_PIA_PH_001.png" id="22_i2xnh"]
 [ext_resource type="Texture2D" uid="uid://nmtb4uegvted" path="res://textures/Book_A_FX3_PIA_PH_001.png" id="23_mr705"]
 [ext_resource type="Texture2D" uid="uid://ckuxx4ljyj3ui" path="res://textures/Book_A_PIA_PH_002.png" id="24_bqcn6"]
-[ext_resource type="Texture2D" uid="uid://c1m3r0b1715n5" path="res://textures/Book_C_PIA_PH_001.png" id="25_xrit5"]
 [ext_resource type="Texture2D" uid="uid://c48ng04lrrj20" path="res://textures/Cursor_A_PIA_PH_002.png" id="26_s6sac"]
 [ext_resource type="Texture2D" uid="uid://t68hwudhk4t6" path="res://textures/Cursor_B_PIA_PH_001.png" id="27_w2mrh"]
 [ext_resource type="Texture2D" uid="uid://b520i08yjbs35" path="res://textures/DonBox_FX1_PIA_PH_001.png" id="28_gah56"]
@@ -65,6 +71,54 @@ position = Vector2(1038.26, 1148.59)
 scale = Vector2(0.334, 0.334)
 texture = ExtResource("19_7482g")
 
+[node name="BookBFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
+position = Vector2(465.541, 657.897)
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("5_gbbkh")
+
+[node name="BookBFx2PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
+position = Vector2(465.541, 657.897)
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("6_cj2ue")
+
+[node name="BookBFx3PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
+position = Vector2(465.541, 657.897)
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("7_w4jox")
+
+[node name="BookBPiaPh002" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(465.541, 657.897)
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("8_c1yqw")
+
+[node name="BookCFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
+position = Vector2(846.845, 868.149)
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("9_cepqr")
+
+[node name="BookCFx2PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
+position = Vector2(846.845, 868.149)
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("10_7u3ka")
+
+[node name="BookCFx3PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
+position = Vector2(846.845, 868.149)
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("11_eqtju")
+
+[node name="BookCPiaPh002" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(846.845, 868.149)
+scale = Vector2(0.334, 0.334)
+texture = ExtResource("12_weoj3")
+
 [node name="BookAFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
 z_index = 2
 position = Vector2(1152.7, 755.093)
@@ -88,18 +142,6 @@ z_index = 1
 position = Vector2(1152.7, 755.093)
 scale = Vector2(0.334, 0.334)
 texture = ExtResource("24_bqcn6")
-
-[node name="BookBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
-z_index = 1
-position = Vector2(449.322, 655.835)
-scale = Vector2(0.334084, 0.334084)
-texture = ExtResource("2_py4ic")
-
-[node name="BookCPiaPh001" type="Sprite2D" parent="CanvasLayer"]
-z_index = 1
-position = Vector2(831.659, 852.156)
-scale = Vector2(0.334, 0.334)
-texture = ExtResource("25_xrit5")
 
 [node name="DonBoxAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
 z_index = 2
