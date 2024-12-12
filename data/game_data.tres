@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=9 format=3 uid="uid://cu41g4f6klfkv"]
+[gd_resource type="Resource" script_class="GameData" load_steps=11 format=3 uid="uid://cu41g4f6klfkv"]
 
 [ext_resource type="Script" path="res://scripts/resources/day_data.gd" id="1_bhg6v"]
 [ext_resource type="Script" path="res://scripts/resources/game_data.gd" id="1_ifvuy"]
@@ -8,9 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://cujbia1rgtqmm" path="res://scenes/bases/rule_base.tscn" id="4_skul2"]
 [ext_resource type="Script" path="res://game_scripts/comments/commentscript_damaged_book.gd" id="5_jq4ut"]
 [ext_resource type="Script" path="res://game_scripts/comments/commentscript_broke_rules.gd" id="6_vs1vm"]
+[ext_resource type="Script" path="res://game_scripts/comments/commentscript_all_rules_followed.gd" id="7_i33fm"]
+[ext_resource type="Script" path="res://game_scripts/comments/commentscript_book_quantity.gd" id="8_bvk3a"]
 
 [resource]
 script = ExtResource("1_ifvuy")
 days = Array[ExtResource("1_bhg6v")]([ExtResource("2_5ty5n"), ExtResource("3_2gtou")])
-global_comments = Array[GDScript]([ExtResource("4_ghm3y"), ExtResource("5_jq4ut"), ExtResource("6_vs1vm")])
+global_rules = Array[GDScript]([])
+global_comments = Array[GDScript]([ExtResource("4_ghm3y"), ExtResource("5_jq4ut"), ExtResource("6_vs1vm"), ExtResource("7_i33fm"), ExtResource("8_bvk3a")])
 rule_prefab = ExtResource("4_skul2")
