@@ -10,8 +10,8 @@ enum Quantity
 var quantity: Quantity = Quantity.NONE
 
 func is_valid(day_result: DayResult) -> bool:
-	var books = day_result.total_stored_items.filter(func(item): return item is Book)
-	var nbOfBooks = books.size()
+	var books := day_result.total_stored_items.filter(func(item): return item is Book)
+	var nbOfBooks := books.size()
 	
 	if nbOfBooks >= 10:
 		quantity = Quantity.ALOT

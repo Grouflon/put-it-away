@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DayData" load_steps=8 format=3 uid="uid://co33rdifn8cy6"]
+[gd_resource type="Resource" script_class="DayData" load_steps=9 format=3 uid="uid://co33rdifn8cy6"]
 
 [ext_resource type="PackedScene" uid="uid://cs3rvjydop3ig" path="res://items/books/book4.tscn" id="1_26sgs"]
 [ext_resource type="PackedScene" uid="uid://b8h3x8bu6ef1" path="res://items/books/book1.tscn" id="1_bq3hc"]
@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://bsnf8epar3p2y" path="res://items/banana.tscn" id="2_yb1l2"]
 [ext_resource type="PackedScene" uid="uid://bfdqk1ewdgpom" path="res://items/books/book2.tscn" id="3_ppbib"]
 [ext_resource type="Script" path="res://game_scripts/rules/rulescript_template.gd" id="5_ikp00"]
+[ext_resource type="PackedScene" uid="uid://3csykj8g7r50" path="res://items/books/book5.tscn" id="5_sfl8v"]
 [ext_resource type="Script" path="res://game_scripts/rules/rulescript_after1945.gd" id="6_45q00"]
 
 [resource]
 script = ExtResource("2_fbl4b")
-box_content = Array[PackedScene]([ExtResource("1_26sgs"), ExtResource("1_bq3hc"), ExtResource("2_yb1l2"), ExtResource("3_ppbib")])
+box_content = Array[PackedScene]([ExtResource("1_26sgs"), ExtResource("1_bq3hc"), ExtResource("2_yb1l2"), ExtResource("3_ppbib"), ExtResource("5_sfl8v")])
 rules = Array[GDScript]([ExtResource("5_ikp00"), ExtResource("6_45q00")])
 comments = Array[GDScript]([])

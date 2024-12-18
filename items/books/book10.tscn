@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d270rrliqs2mp"]
+
+[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_qfeth"]
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_lnvwe"]
+
+[sub_resource type="Resource" id="Resource_x3ge3"]
+script = ExtResource("2_lnvwe")
+title = "Ils étaient 10"
+author = "Agatha Cristie"
+year_of_publication = 1939
+in_collection = false
+return_date = 20241119
+condition = 0
+category = 2
+tags = Array[String](["Fiction", "Policier", "Woke"])
+color = Color(0.804392, 0.467429, 5.77569e-07, 1)
+
+[node name="Book" instance=ExtResource("1_qfeth")]
+data = SubResource("Resource_x3ge3")
