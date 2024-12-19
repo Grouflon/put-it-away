@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfdqk1ewdgpom"]
 
-[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_efk2n"]
-[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_ktqnd"]
+[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_vs2m6"]
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_shvef"]
 
 [sub_resource type="Resource" id="Resource_evi85"]
-script = ExtResource("2_ktqnd")
+script = ExtResource("2_shvef")
 title = "Triceratops and Bottoms"
 author = "Lola Faust"
 year_of_publication = 2022
-in_collection = true
+in_collection = false
 return_date = 20241123
-condition = 3
+condition = 0
 category = 2
 tags = Array[String](["SF", "Fiction", "VO", "Woke", "Autrice"])
 color = Color(0.950469, 0.480372, 1, 1)
 
-[node name="Book" instance=ExtResource("1_efk2n")]
+[node name="Book" instance=ExtResource("1_vs2m6")]
 data = SubResource("Resource_evi85")

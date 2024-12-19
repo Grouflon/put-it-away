@@ -1,13 +1,20 @@
-[gd_resource type="Resource" script_class="DayData" load_steps=6 format=3 uid="uid://w6k33ryuggsx"]
+[gd_resource type="Resource" script_class="DayData" load_steps=13 format=3 uid="uid://w6k33ryuggsx"]
 
-[ext_resource type="PackedScene" uid="uid://cw6dydpy51uch" path="res://items/books/book6.tscn" id="1_ksnwf"]
+[ext_resource type="PackedScene" uid="uid://bjeq32lnu0iav" path="res://items/flowers.tscn" id="1_tvtj8"]
+[ext_resource type="PackedScene" uid="uid://bfdqk1ewdgpom" path="res://items/books/book_TriceratopAndBottoms.tscn" id="2_66bwh"]
+[ext_resource type="PackedScene" uid="uid://vg43kqnir1c7" path="res://items/books/book_LeChantDAChille.tscn" id="3_u1m0s"]
 [ext_resource type="Script" path="res://game_scripts/rules/rulescript_only_science.gd" id="4_4hll7"]
+[ext_resource type="PackedScene" uid="uid://3csykj8g7r50" path="res://items/books/book_TheShining.tscn" id="4_i66vw"]
+[ext_resource type="PackedScene" uid="uid://beec1sqc6j8ui" path="res://items/books/book_LaRelativite.tscn" id="5_vmxan"]
 [ext_resource type="Script" path="res://game_scripts/rules/rulescript_template.gd" id="6_hrwi7"]
-[ext_resource type="Script" path="res://game_scripts/rules/rulescript_destroy_damaged.gd" id="7_dtoac"]
+[ext_resource type="PackedScene" uid="uid://86y48qksndj2" path="res://items/books/book_SuperDoigtEtLeGangDesOrteilsMalfaisants.tscn" id="6_ufflj"]
+[ext_resource type="PackedScene" uid="uid://2ustkmfgbqln" path="res://items/books/book_LutterContreLaPauvrete.tscn" id="7_4d3yk"]
+[ext_resource type="PackedScene" uid="uid://bvi0pbo0vvfam" path="res://items/books/book_LeTumulteDesFlots.tscn" id="8_tbe3j"]
+[ext_resource type="Script" path="res://game_scripts/rules/rulescript_no_damaged.gd" id="10_6t38b"]
 [ext_resource type="Script" path="res://scripts/resources/day_data.gd" id="10_hf0j2"]
 
 [resource]
 script = ExtResource("10_hf0j2")
-box_content = Array[PackedScene]([ExtResource("1_ksnwf")])
-rules = Array[GDScript]([ExtResource("6_hrwi7"), ExtResource("7_dtoac"), ExtResource("4_4hll7")])
+box_content = Array[PackedScene]([ExtResource("1_tvtj8"), ExtResource("2_66bwh"), ExtResource("3_u1m0s"), ExtResource("4_i66vw"), ExtResource("5_vmxan"), ExtResource("6_ufflj"), ExtResource("7_4d3yk"), ExtResource("8_tbe3j")])
+rules = Array[GDScript]([ExtResource("6_hrwi7"), ExtResource("10_6t38b"), ExtResource("4_4hll7")])
 comments = Array[GDScript]([])

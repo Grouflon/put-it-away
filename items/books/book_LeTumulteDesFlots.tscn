@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvi0pbo0vvfam"]
+
+[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_xt7xr"]
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_u26ta"]
+
+[sub_resource type="Resource" id="Resource_x3ge3"]
+script = ExtResource("2_u26ta")
+title = "Le Tumulte des Flots"
+author = "Yukio Mishima"
+year_of_publication = 1978
+in_collection = true
+return_date = 20241119
+condition = 0
+category = 2
+tags = Array[String](["Fiction", "Romance"])
+color = Color(0.885697, 0.581498, 0.89472, 1)
+
+[node name="Book" instance=ExtResource("1_xt7xr")]
+data = SubResource("Resource_x3ge3")

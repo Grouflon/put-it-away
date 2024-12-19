@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://86y48qksndj2"]
+
+[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_pofpf"]
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_4dpi5"]
+
+[sub_resource type="Resource" id="Resource_x3ge3"]
+script = ExtResource("2_4dpi5")
+title = "Super Doigt et le Gang des Orteils Malfaisants"
+author = "Vincent Guigue"
+year_of_publication = 2022
+in_collection = true
+return_date = 20241119
+condition = 1
+category = 2
+tags = Array[String](["Fiction", "Jeunesse"])
+color = Color(0.214972, 0.81404, 0.86155, 1)
+
+[node name="Book" instance=ExtResource("1_pofpf")]
+data = SubResource("Resource_x3ge3")

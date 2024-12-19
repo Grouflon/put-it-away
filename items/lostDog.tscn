@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnxjqirkh2c7u"]
+
+[ext_resource type="PackedScene" uid="uid://bp1yij04a03rl" path="res://scenes/bases/item_base.tscn" id="1_x8jf3"]
+[ext_resource type="Texture2D" uid="uid://bxynphcqso633" path="res://textures/lostDog.png" id="2_13nlf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwcgg"]
+size = Vector2(192, 268)
+
+[node name="Banana" instance=ExtResource("1_x8jf3")]
+persist_between_days = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+position = Vector2(-74, -84)
+scale = Vector2(0.120195, 0.120195)
+texture = ExtResource("2_13nlf")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-73, -84)
+shape = SubResource("RectangleShape2D_cwcgg")

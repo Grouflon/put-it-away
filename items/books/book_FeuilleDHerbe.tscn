@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbi21kohjyuo3"]
+
+[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_g6ot8"]
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_hcfrf"]
+
+[sub_resource type="Resource" id="Resource_x3ge3"]
+script = ExtResource("2_hcfrf")
+title = "Feuille d'herbe"
+author = "Walt Whitman"
+year_of_publication = 1855
+in_collection = false
+return_date = 20241119
+condition = 1
+category = 2
+tags = Array[String](["Fiction", "Poésie"])
+color = Color(0.433029, 0.577118, 0.381968, 1)
+
+[node name="Book" instance=ExtResource("1_g6ot8")]
+data = SubResource("Resource_x3ge3")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://beec1sqc6j8ui"]
+
+[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_f47om"]
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_2cnn3"]
+
+[sub_resource type="Resource" id="Resource_x3ge3"]
+script = ExtResource("2_2cnn3")
+title = "La Relativité"
+author = "Einstein"
+year_of_publication = 1905
+in_collection = false
+return_date = 20241119
+condition = 1
+category = 0
+tags = Array[String](["Non-Fiction", "Sciences", "Physique"])
+color = Color(0, 0.434096, 0.407515, 1)
+
+[node name="Book" instance=ExtResource("1_f47om")]
+data = SubResource("Resource_x3ge3")

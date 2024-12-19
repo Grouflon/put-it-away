@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8p5suo6y0qeh"]
 
-[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_v0dgx"]
-[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_yw1qs"]
+[ext_resource type="PackedScene" uid="uid://dhp81niqmvvrt" path="res://scenes/bases/book_base.tscn" id="1_iv1hi"]
+[ext_resource type="Script" path="res://scripts/resources/book_data.gd" id="2_dabi7"]
 
 [sub_resource type="Resource" id="Resource_x3ge3"]
-script = ExtResource("2_yw1qs")
+script = ExtResource("2_dabi7")
 title = "Le Capital"
 author = "Marx"
 year_of_publication = 1867
 in_collection = true
 return_date = 20241119
-condition = 2
+condition = 1
 category = 1
 tags = Array[String](["Non-Fiction", "Woke", "Politique", "SHS"])
 color = Color(0.693783, 0.0993402, 0, 1)
 
-[node name="Book" instance=ExtResource("1_v0dgx")]
+[node name="Book" instance=ExtResource("1_iv1hi")]
 data = SubResource("Resource_x3ge3")

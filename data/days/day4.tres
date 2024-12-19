@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="DayData" load_steps=6 format=3 uid="uid://c53jfgus4pc2i"]
+[gd_resource type="Resource" script_class="DayData" load_steps=11 format=3 uid="uid://c53jfgus4pc2i"]
 
-[ext_resource type="PackedScene" uid="uid://3csykj8g7r50" path="res://items/books/book5.tscn" id="1_l57oh"]
+[ext_resource type="PackedScene" uid="uid://cmafj1bkq4dhr" path="res://items/books/book_DeLEspritDesLois.tscn" id="1_frss0"]
 [ext_resource type="Script" path="res://game_scripts/rules/rulescript_template.gd" id="1_tpnse"]
-[ext_resource type="Script" path="res://game_scripts/rules/rulescript_destroy_damaged.gd" id="2_ckfuv"]
+[ext_resource type="PackedScene" uid="uid://dbi21kohjyuo3" path="res://items/books/book_FeuilleDHerbe.tscn" id="2_r3bdt"]
+[ext_resource type="PackedScene" uid="uid://cilrpp2iq1tf" path="res://items/books/book_TwilightT1Fascination.tscn" id="3_l4tk2"]
 [ext_resource type="Script" path="res://scripts/resources/day_data.gd" id="4_725e5"]
-[ext_resource type="Script" path="res://game_scripts/rules/rulescript_after1945.gd" id="4_u6wqv"]
+[ext_resource type="PackedScene" uid="uid://dsy58gdijrbx7" path="res://items/books/book_LeSilmarillion.tscn" id="4_h5aeb"]
+[ext_resource type="PackedScene" uid="uid://cw6dydpy51uch" path="res://items/books/book_LaFoireAuxCochons.tscn" id="5_uar1s"]
+[ext_resource type="PackedScene" uid="uid://bfao02ppwlxt1" path="res://items/books/book_LaLicorneNoire.tscn" id="6_lgicl"]
+[ext_resource type="Script" path="res://game_scripts/rules/rulescript_no_damaged.gd" id="8_w410a"]
+[ext_resource type="Script" path="res://game_scripts/rules/rulescript_only_after1945.gd" id="9_tm74r"]
 
 [resource]
 script = ExtResource("4_725e5")
-box_content = Array[PackedScene]([ExtResource("1_l57oh")])
-rules = Array[GDScript]([ExtResource("1_tpnse"), ExtResource("2_ckfuv"), ExtResource("4_u6wqv")])
+box_content = Array[PackedScene]([ExtResource("1_frss0"), ExtResource("2_r3bdt"), ExtResource("3_l4tk2"), ExtResource("4_h5aeb"), ExtResource("5_uar1s"), ExtResource("6_lgicl")])
+rules = Array[GDScript]([ExtResource("1_tpnse"), ExtResource("8_w410a"), ExtResource("9_tm74r")])
 comments = Array[GDScript]([])
