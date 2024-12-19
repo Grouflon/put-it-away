@@ -5,7 +5,7 @@ func is_valid(day_result: DayResult) -> bool:
 		var book: Book = item as Book
 		if book == null: continue
 		
-		if book.data.condition == BookData.Condition.DAMAGED:
+		if book.data.condition == BookData.Condition.DAMAGED or book.data.condition == BookData.Condition.USED:
 			return true
 		
 	return false

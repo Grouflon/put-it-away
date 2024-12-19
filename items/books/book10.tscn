@@ -12,7 +12,7 @@ in_collection = false
 return_date = 20241119
 condition = 0
 category = 2
-tags = Array[String](["Fiction", "Policier", "Woke"])
+tags = Array[String](["Fiction", "Policier", "Woke", "Autrice"])
 color = Color(0.804392, 0.467429, 5.77569e-07, 1)
 
 [node name="Book" instance=ExtResource("1_qfeth")]

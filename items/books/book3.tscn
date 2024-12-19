@@ -12,7 +12,7 @@ in_collection = false
 return_date = 20241123
 condition = 1
 category = 0
-tags = Array[String](["Sciences", "Non-Fiction", "Medecine"])
+tags = Array[String](["Sciences", "Non-Fiction", "Medecine", "Autrice"])
 color = Color(6.73831e-06, 0.77133, 0.968708, 1)
 
 [node name="Book" instance=ExtResource("1_lw5nj")]

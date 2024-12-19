@@ -6,11 +6,11 @@ func check_rule(day_result: DayResult) -> bool:
 		var book: Book = item as Book
 		if book == null: continue
 		
-		if book.data.condition == BookData.Condition.DAMAGED:
+		if book.data.condition == BookData.Condition.DAMAGED or book.data.condition == BookData.Condition.USED:
 			return false
 		
 	return true
 
 # Le texte du post-it
 func get_text() -> String:
-	return "Détruire les livres endommagés"
+	return "Détruire les livres trop abîmés"

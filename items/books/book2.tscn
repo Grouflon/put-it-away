@@ -12,7 +12,7 @@ in_collection = true
 return_date = 20241123
 condition = 3
 category = 2
-tags = Array[String](["SF", "Fiction", "VO", "Woke"])
+tags = Array[String](["SF", "Fiction", "VO", "Woke", "Autrice"])
 color = Color(0.950469, 0.480372, 1, 1)
 
 [node name="Book" instance=ExtResource("1_efk2n")]

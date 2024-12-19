@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bfdqk1ewdgpom" path="res://items/books/book2.tscn" id="3_ppbib"]
 [ext_resource type="Script" path="res://game_scripts/rules/rulescript_template.gd" id="5_ikp00"]
 [ext_resource type="PackedScene" uid="uid://3csykj8g7r50" path="res://items/books/book5.tscn" id="5_sfl8v"]
-[ext_resource type="Script" path="res://game_scripts/rules/rulescript_after1945.gd" id="6_45q00"]
+[ext_resource type="Script" path="res://game_scripts/rules/rulescript_destroy_damaged.gd" id="7_o4hws"]
 
 [resource]
 script = ExtResource("2_fbl4b")
 box_content = Array[PackedScene]([ExtResource("1_26sgs"), ExtResource("1_bq3hc"), ExtResource("2_yb1l2"), ExtResource("3_ppbib"), ExtResource("5_sfl8v")])
-rules = Array[GDScript]([ExtResource("5_ikp00"), ExtResource("6_45q00")])
+rules = Array[GDScript]([ExtResource("5_ikp00"), ExtResource("7_o4hws")])
 comments = Array[GDScript]([])
