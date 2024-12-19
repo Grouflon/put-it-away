@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DayData" load_steps=6 format=3 uid="uid://c53jfgus4pc2i"]
+
+[ext_resource type="PackedScene" uid="uid://3csykj8g7r50" path="res://items/books/book5.tscn" id="1_l57oh"]
+[ext_resource type="Script" path="res://game_scripts/rules/rulescript_template.gd" id="1_tpnse"]
+[ext_resource type="Script" path="res://game_scripts/rules/rulescript_destroy_damaged.gd" id="2_ckfuv"]
+[ext_resource type="Script" path="res://scripts/resources/day_data.gd" id="4_725e5"]
+[ext_resource type="Script" path="res://game_scripts/rules/rulescript_after1945.gd" id="4_u6wqv"]
+
+[resource]
+script = ExtResource("4_725e5")
+box_content = Array[PackedScene]([ExtResource("1_l57oh")])
+rules = Array[GDScript]([ExtResource("1_tpnse"), ExtResource("2_ckfuv"), ExtResource("4_u6wqv")])
+comments = Array[GDScript]([])
