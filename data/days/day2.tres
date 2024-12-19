@@ -1,13 +1,16 @@
-[gd_resource type="Resource" script_class="DayData" load_steps=6 format=3 uid="uid://b3wg2xa5mewsd"]
+[gd_resource type="Resource" script_class="DayData" load_steps=9 format=3 uid="uid://b3wg2xa5mewsd"]
 
 [ext_resource type="PackedScene" uid="uid://bjeq32lnu0iav" path="res://items/flowers.tscn" id="1_asctj"]
 [ext_resource type="PackedScene" uid="uid://vrl0rj8st1pu" path="res://items/books/book3.tscn" id="1_i1kit"]
 [ext_resource type="Script" path="res://game_scripts/rules/rulescript_template.gd" id="3_4af8v"]
+[ext_resource type="PackedScene" uid="uid://d270rrliqs2mp" path="res://items/books/book10.tscn" id="3_6o83c"]
 [ext_resource type="Script" path="res://game_scripts/rules/rulescript_destroy_damaged.gd" id="4_3ixq3"]
+[ext_resource type="PackedScene" uid="uid://b8p5suo6y0qeh" path="res://items/books/book7.tscn" id="4_d73tg"]
 [ext_resource type="Script" path="res://scripts/resources/day_data.gd" id="4_neiiv"]
+[ext_resource type="PackedScene" uid="uid://cootgsvi30yl" path="res://items/books/book8.tscn" id="5_r2yrr"]
 
 [resource]
 script = ExtResource("4_neiiv")
-box_content = Array[PackedScene]([ExtResource("1_asctj"), ExtResource("1_i1kit")])
+box_content = Array[PackedScene]([ExtResource("1_asctj"), ExtResource("1_i1kit"), ExtResource("3_6o83c"), ExtResource("4_d73tg"), ExtResource("5_r2yrr")])
 rules = Array[GDScript]([ExtResource("3_4af8v"), ExtResource("4_3ixq3")])
 comments = Array[GDScript]([])
