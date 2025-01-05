@@ -1,290 +1,238 @@
-[gd_scene load_steps=39 format=3 uid="uid://crvpdvcdky4gl"]
+[gd_scene load_steps=38 format=3 uid="uid://crvpdvcdky4gl"]
 
-[ext_resource type="Texture2D" uid="uid://b8smqenc2yo3c" path="res://textures/DonBox_A_PIA_PH_001.png" id="4_fb0ni"]
-[ext_resource type="Texture2D" uid="uid://5ef64xbosehu" path="res://textures/DonBox_B_PIA_PH_001.png" id="5_5nk0o"]
-[ext_resource type="Texture2D" uid="uid://bpdoras404m1i" path="res://textures/Book_B_FX1_PIA_PH_001.png" id="5_gbbkh"]
-[ext_resource type="Texture2D" uid="uid://c8xev2eu6jdgf" path="res://textures/Book_B_FX2_PIA_PH_001.png" id="6_cj2ue"]
-[ext_resource type="Texture2D" uid="uid://bmxmxblcbpguo" path="res://textures/Memo_A_PIA_PH_001.png" id="6_swo1i"]
-[ext_resource type="Texture2D" uid="uid://uuaiwgv3ur0l" path="res://textures/Memo_B_PIA_PH_001.png" id="7_0m8s8"]
-[ext_resource type="Texture2D" uid="uid://ds8s2501ebdxb" path="res://textures/Book_B_FX3_PIA_PH_001.png" id="7_w4jox"]
-[ext_resource type="Texture2D" uid="uid://cj0516561myqk" path="res://textures/Memo_C_PIA_PH_001.png" id="8_awuyx"]
-[ext_resource type="Texture2D" uid="uid://dubl8l2pgui0y" path="res://textures/Book_B_PIA_PH_002.png" id="8_c1yqw"]
-[ext_resource type="Texture2D" uid="uid://b2jc3j6k5j68d" path="res://textures/Book_C_FX1_PIA_PH_001.png" id="9_cepqr"]
-[ext_resource type="Texture2D" uid="uid://cmsjkqhyoji5g" path="res://textures/Memo_D_PIA_PH_001.png" id="9_koy7m"]
-[ext_resource type="Texture2D" uid="uid://dqgm7eacii4pp" path="res://textures/Book_C_FX2_PIA_PH_001.png" id="10_7u3ka"]
-[ext_resource type="Texture2D" uid="uid://ci7seypjew4xa" path="res://textures/Memo_E_PIA_PH_001.png" id="10_s4tgt"]
-[ext_resource type="Texture2D" uid="uid://dts4drqthm30x" path="res://textures/Memo_F_PIA_PH_001.png" id="11_2b1o6"]
-[ext_resource type="Texture2D" uid="uid://drtagx25hmmb8" path="res://textures/Book_C_FX3_PIA_PH_001.png" id="11_eqtju"]
-[ext_resource type="Texture2D" uid="uid://bg56ljgp2m08k" path="res://textures/Scan_A_FX1_PIA_PH_001.png" id="12_60x4d"]
-[ext_resource type="Texture2D" uid="uid://c8j03w5bh40c2" path="res://textures/Book_C_PIA_PH_002.png" id="12_weoj3"]
-[ext_resource type="Texture2D" uid="uid://0mxhto5ubytg" path="res://textures/Scan_A_PIA_PH_001.png" id="13_bixd4"]
-[ext_resource type="Texture2D" uid="uid://qi74e5dnk0qt" path="res://textures/Tablet_A_PIA_PH_001.png" id="14_m4drx"]
-[ext_resource type="Texture2D" uid="uid://do2bl8oneq1w0" path="res://textures/Background_A_PIA_PH_001.png" id="15_baxus"]
-[ext_resource type="Texture2D" uid="uid://cr8fnidxojqap" path="res://textures/Cart_A_001.png" id="16_bd7xq"]
-[ext_resource type="Texture2D" uid="uid://ccpswtis5rpcm" path="res://textures/Shredder_A_001.png" id="17_ux3o1"]
-[ext_resource type="Texture2D" uid="uid://ud3vkift5k8c" path="res://textures/Background_B_PIA_PH_001.png" id="18_3g1ao"]
-[ext_resource type="Texture2D" uid="uid://b25us61fjtpdd" path="res://textures/BarCode_A_PIA_PH_001.png" id="19_7482g"]
-[ext_resource type="Texture2D" uid="uid://4fjecq2tfqu5" path="res://textures/BeginDay_A_PIA_PH_001.png" id="20_yojwa"]
-[ext_resource type="Texture2D" uid="uid://dko34fy0dw1f0" path="res://textures/Book_A_FX1_PIA_PH_001.png" id="21_gl57i"]
-[ext_resource type="Texture2D" uid="uid://bskip4ee8i4i6" path="res://textures/Book_A_FX2_PIA_PH_001.png" id="22_i2xnh"]
-[ext_resource type="Texture2D" uid="uid://nmtb4uegvted" path="res://textures/Book_A_FX3_PIA_PH_001.png" id="23_mr705"]
-[ext_resource type="Texture2D" uid="uid://ckuxx4ljyj3ui" path="res://textures/Book_A_PIA_PH_002.png" id="24_bqcn6"]
-[ext_resource type="Texture2D" uid="uid://c48ng04lrrj20" path="res://textures/Cursor_A_PIA_PH_002.png" id="26_s6sac"]
-[ext_resource type="Texture2D" uid="uid://t68hwudhk4t6" path="res://textures/Cursor_B_PIA_PH_001.png" id="27_w2mrh"]
-[ext_resource type="Texture2D" uid="uid://b520i08yjbs35" path="res://textures/DonBox_FX1_PIA_PH_001.png" id="28_gah56"]
-[ext_resource type="Texture2D" uid="uid://bid2jxpryhl3g" path="res://textures/EndDay_A_PIA_PH_001.png" id="29_ir6u0"]
-[ext_resource type="Texture2D" uid="uid://dja8pblyk0x5v" path="res://textures/Object_A_PIA_PH_001.png" id="30_7rp84"]
-[ext_resource type="Texture2D" uid="uid://b40121a7rrxgp" path="res://textures/Object_B_PIA_PH_001.png" id="31_v4tdx"]
-[ext_resource type="Texture2D" uid="uid://brhbq54ipnteb" path="res://textures/Object_C_PIA_PH_001.png" id="32_1j1be"]
-[ext_resource type="Texture2D" uid="uid://bdj0c8xx3xqf4" path="res://textures/Shredder_A_FX1_PIA_PH_001.png" id="33_sfql5"]
-[ext_resource type="Texture2D" uid="uid://crlu1joxfywst" path="res://textures/Tablet_A_UI1_PIA_PH_001.png" id="34_4wyc3"]
+[ext_resource type="Texture2D" uid="uid://b8smqenc2yo3c" path="res://textures/DonBox-B-01.png" id="4_fb0ni"]
+[ext_resource type="Texture2D" uid="uid://5ef64xbosehu" path="res://textures/DonBox-A-01.png" id="5_5nk0o"]
+[ext_resource type="Texture2D" uid="uid://bpdoras404m1i" path="res://textures/Book-B-FX1-01.png" id="5_gbbkh"]
+[ext_resource type="Texture2D" uid="uid://c8xev2eu6jdgf" path="res://textures/Book-B-FX2-01.png" id="6_cj2ue"]
+[ext_resource type="Texture2D" uid="uid://bmxmxblcbpguo" path="res://textures/Memo-A-01.png" id="6_swo1i"]
+[ext_resource type="Texture2D" uid="uid://uuaiwgv3ur0l" path="res://textures/Memo-B-01.png" id="7_0m8s8"]
+[ext_resource type="Texture2D" uid="uid://ds8s2501ebdxb" path="res://textures/Book-B-FX3-01.png" id="7_w4jox"]
+[ext_resource type="Texture2D" uid="uid://cj0516561myqk" path="res://textures/Memo-C-01.png" id="8_awuyx"]
+[ext_resource type="Texture2D" uid="uid://dubl8l2pgui0y" path="res://textures/Book-B-02.png" id="8_c1yqw"]
+[ext_resource type="Texture2D" uid="uid://b2jc3j6k5j68d" path="res://textures/Book-C-FX1-01.png" id="9_cepqr"]
+[ext_resource type="Texture2D" uid="uid://cmsjkqhyoji5g" path="res://textures/Memo-D-01.png" id="9_koy7m"]
+[ext_resource type="Texture2D" uid="uid://dqgm7eacii4pp" path="res://textures/Book-C-FX2-01.png" id="10_7u3ka"]
+[ext_resource type="Texture2D" uid="uid://ci7seypjew4xa" path="res://textures/Memo-E-01.png" id="10_s4tgt"]
+[ext_resource type="Texture2D" uid="uid://dts4drqthm30x" path="res://textures/Memo-F-01.png" id="11_2b1o6"]
+[ext_resource type="Texture2D" uid="uid://drtagx25hmmb8" path="res://textures/Book-C-FX3-01.png" id="11_eqtju"]
+[ext_resource type="Texture2D" uid="uid://bg56ljgp2m08k" path="res://textures/Scan-A-FX1-01.png" id="12_60x4d"]
+[ext_resource type="Texture2D" uid="uid://c8j03w5bh40c2" path="res://textures/Book-C-02.png" id="12_weoj3"]
+[ext_resource type="Texture2D" uid="uid://0mxhto5ubytg" path="res://textures/Scan-A-01.png" id="13_bixd4"]
+[ext_resource type="Texture2D" uid="uid://qi74e5dnk0qt" path="res://textures/Tablet-A-01.png" id="14_m4drx"]
+[ext_resource type="Texture2D" uid="uid://do2bl8oneq1w0" path="res://textures/BGProps-A-01.png" id="15_baxus"]
+[ext_resource type="Texture2D" uid="uid://cr8fnidxojqap" path="res://textures/Cart-A-01.png" id="16_bd7xq"]
+[ext_resource type="Texture2D" uid="uid://ccpswtis5rpcm" path="res://textures/Shredder-A-01.png" id="17_ux3o1"]
+[ext_resource type="Texture2D" uid="uid://b25us61fjtpdd" path="res://textures/BarCode-A-01.png" id="19_7482g"]
+[ext_resource type="Texture2D" uid="uid://dko34fy0dw1f0" path="res://textures/Book-A-FX1-01.png" id="21_gl57i"]
+[ext_resource type="Texture2D" uid="uid://bskip4ee8i4i6" path="res://textures/Book-A-FX2-01.png" id="22_i2xnh"]
+[ext_resource type="Texture2D" uid="uid://nmtb4uegvted" path="res://textures/Book-A-FX3-01.png" id="23_mr705"]
+[ext_resource type="Texture2D" uid="uid://ckuxx4ljyj3ui" path="res://textures/Book-A-02.png" id="24_bqcn6"]
+[ext_resource type="Texture2D" uid="uid://c48ng04lrrj20" path="res://textures/Cursor-A-02.png" id="26_s6sac"]
+[ext_resource type="Texture2D" uid="uid://t68hwudhk4t6" path="res://textures/Cursor-B-01.png" id="27_w2mrh"]
+[ext_resource type="Texture2D" uid="uid://b520i08yjbs35" path="res://textures/DonBox-FX1-01.png" id="28_gah56"]
+[ext_resource type="Texture2D" uid="uid://dja8pblyk0x5v" path="res://textures/Object-A-01.png" id="30_7rp84"]
+[ext_resource type="Texture2D" uid="uid://b40121a7rrxgp" path="res://textures/Object-B-01.png" id="31_v4tdx"]
+[ext_resource type="Texture2D" uid="uid://brhbq54ipnteb" path="res://textures/Object-C-01.png" id="32_1j1be"]
+[ext_resource type="Texture2D" uid="uid://bdj0c8xx3xqf4" path="res://textures/Shredder-A-FX1-01.png" id="33_sfql5"]
+[ext_resource type="Texture2D" uid="uid://34dwij3c2qyv" path="res://textures/Memo-B-02.png" id="35_xqh0i"]
+[ext_resource type="Texture2D" uid="uid://cxgov3762eovd" path="res://textures/Memo-E-02.png" id="36_h2xh1"]
+[ext_resource type="Texture2D" uid="uid://yhudv007s60d" path="res://textures/Cart-B-01.png" id="37_05i4a"]
 
 [node name="Mockup" type="Node2D"]
 position = Vector2(727, 342)
-scale = Vector2(0.578, 0.578)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="CursorAPiaPh002" type="Sprite2D" parent="CanvasLayer"]
+[node name="CursorAPiaPh002" type="Sprite2D" parent="."]
 z_index = 4
-position = Vector2(1456.25, 531.575)
-scale = Vector2(0.334, 0.334)
+position = Vector2(286.972, 222.038)
 texture = ExtResource("26_s6sac")
-metadata/_edit_lock_ = true
 
-[node name="CursorBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="CursorBPiaPh001" type="Sprite2D" parent="."]
 z_index = 4
-position = Vector2(1456.25, 531.575)
-scale = Vector2(0.334, 0.334)
+position = Vector2(286.972, 222.038)
 texture = ExtResource("27_w2mrh")
-metadata/_edit_lock_ = true
 
-[node name="BeginDayAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BeginDayAPiaPh001" type="Sprite2D" parent="."]
 z_index = 3
-position = Vector2(-694.72, 546.092)
-scale = Vector2(0.193052, 0.193052)
-texture = ExtResource("20_yojwa")
+position = Vector2(-2459.72, 353.1)
 
-[node name="BarCodeAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BarCodeAPiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(1038.26, 1148.59)
-scale = Vector2(0.334, 0.334)
+position = Vector2(10.8994, 778.877)
 texture = ExtResource("19_7482g")
 
-[node name="BookBFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookBFx1PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(465.541, 657.897)
-scale = Vector2(0.334, 0.334)
+position = Vector2(-105.902, 314.447)
 texture = ExtResource("5_gbbkh")
 
-[node name="BookBFx2PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookBFx2PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(465.541, 657.897)
-scale = Vector2(0.334, 0.334)
+position = Vector2(-105.902, 314.447)
 texture = ExtResource("6_cj2ue")
 
-[node name="BookBFx3PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookBFx3PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(465.541, 657.897)
-scale = Vector2(0.334, 0.334)
+position = Vector2(-105.902, 314.447)
 texture = ExtResource("7_w4jox")
 
-[node name="BookBPiaPh002" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookBPiaPh002" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(465.541, 657.897)
-scale = Vector2(0.334, 0.334)
+position = Vector2(-105.902, 314.447)
 texture = ExtResource("8_c1yqw")
 
-[node name="BookCFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookCFx1PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(846.845, 868.149)
-scale = Vector2(0.334, 0.334)
+position = Vector2(304.888, 510.026)
 texture = ExtResource("9_cepqr")
 
-[node name="BookCFx2PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookCFx2PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(846.845, 868.149)
-scale = Vector2(0.334, 0.334)
+position = Vector2(304.888, 510.026)
 texture = ExtResource("10_7u3ka")
 
-[node name="BookCFx3PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookCFx3PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(846.845, 868.149)
-scale = Vector2(0.334, 0.334)
+position = Vector2(304.888, 510.026)
 texture = ExtResource("11_eqtju")
 
-[node name="BookCPiaPh002" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookCPiaPh002" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(846.845, 868.149)
-scale = Vector2(0.334, 0.334)
+position = Vector2(304.888, 510.026)
 texture = ExtResource("12_weoj3")
 
-[node name="BookAFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookAFx1PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(1152.7, 755.093)
-scale = Vector2(0.334, 0.334)
+position = Vector2(618.78, 428.789)
 texture = ExtResource("21_gl57i")
 
-[node name="BookAFx2PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookAFx2PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(1152.7, 755.093)
-scale = Vector2(0.334, 0.334)
+position = Vector2(618.78, 428.789)
 texture = ExtResource("22_i2xnh")
 
-[node name="BookAFx3PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookAFx3PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(1152.7, 755.093)
-scale = Vector2(0.334, 0.334)
+position = Vector2(618.78, 428.789)
 texture = ExtResource("23_mr705")
 
-[node name="BookAPiaPh002" type="Sprite2D" parent="CanvasLayer"]
+[node name="BookAPiaPh002" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(1152.7, 755.093)
-scale = Vector2(0.334, 0.334)
+position = Vector2(618.78, 428.789)
 texture = ExtResource("24_bqcn6")
 
-[node name="DonBoxAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="DonBoxAPiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(104.006, 539.676)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(-656.865, 270.648)
 texture = ExtResource("4_fb0ni")
-metadata/_edit_lock_ = true
 
-[node name="ObjectAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="ObjectAPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(449.226, 1417.76)
-scale = Vector2(0.334, 0.334)
+position = Vector2(-204.682, 1138.14)
 texture = ExtResource("30_7rp84")
 
-[node name="ObjectBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="ObjectBPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(952.05, 1413.1)
-scale = Vector2(0.334, 0.334)
+position = Vector2(165.141, 915.288)
 texture = ExtResource("31_v4tdx")
 
-[node name="ObjectCPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="ObjectCPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(1414.69, 1417.57)
-scale = Vector2(0.334, 0.334)
+position = Vector2(159.713, 1244.19)
 texture = ExtResource("32_1j1be")
 
-[node name="DonBoxFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="DonBoxFx1PiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(259.393, 557.74)
-scale = Vector2(0.333, 0.333)
+position = Vector2(-388.029, 301.9)
 texture = ExtResource("28_gah56")
-metadata/_edit_lock_ = true
 
-[node name="DonBoxBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="DonBoxBPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(104.002, 539.676)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(-656.872, 270.648)
 texture = ExtResource("5_5nk0o")
-metadata/_edit_lock_ = true
 
-[node name="MemoAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="MemoAPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(350.778, 195.676)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(-585.82, -188.072)
 texture = ExtResource("6_swo1i")
-metadata/_edit_lock_ = true
 
-[node name="MemoBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="MemoBPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(454.778, 331.676)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(-383.321, -113.004)
 texture = ExtResource("7_0m8s8")
-metadata/_edit_lock_ = true
 
-[node name="MemoCPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="MemoCPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(262.778, 115.676)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(-189.126, -97.8992)
 texture = ExtResource("8_awuyx")
-metadata/_edit_lock_ = true
 
-[node name="MemoDPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="MemoDPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(654.778, 323.676)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(-26.5327, -250.764)
 texture = ExtResource("9_koy7m")
-metadata/_edit_lock_ = true
 
-[node name="MemoEPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="MemoEPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(454.778, 155.676)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(-404.302, -254.102)
 texture = ExtResource("10_s4tgt")
-metadata/_edit_lock_ = true
 
-[node name="MemoFPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="MemoFPiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(558.778, 195.676)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(-214.846, -270.617)
 texture = ExtResource("11_2b1o6")
-metadata/_edit_lock_ = true
 
-[node name="ScanAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="ScanAPiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(1452.64, 849.322)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(680.082, 503.143)
 texture = ExtResource("13_bixd4")
-metadata/_edit_lock_ = true
 
-[node name="ScanAFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="ScanAFx1PiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(1452.64, 849.322)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(680.082, 503.143)
 texture = ExtResource("12_60x4d")
-metadata/_edit_lock_ = true
 
-[node name="TabletAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="TabletAPiaPh001" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(1276.78, 214.422)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(483.638, -89.5433)
 texture = ExtResource("14_m4drx")
 
-[node name="TabletAUi1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="TabletAUi1PiaPh001" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(1276.78, 214.422)
-scale = Vector2(0.334, 0.334)
-texture = ExtResource("34_4wyc3")
+position = Vector2(951.177, -220.723)
 
-[node name="BackgroundAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(805.162, 539.996)
-scale = Vector2(0.333336, 0.333336)
+[node name="BackgroundAPiaPh001" type="Sprite2D" parent="."]
+position = Vector2(-587.943, 736.093)
 texture = ExtResource("15_baxus")
-metadata/_edit_lock_ = true
 
-[node name="CartAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="CartAPiaPh001" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(1748.78, 274.783)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(1027.16, -71.1359)
 texture = ExtResource("16_bd7xq")
-metadata/_edit_lock_ = true
 
-[node name="ShredderAFx1PiaPh001" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(1860.63, 846.667)
-scale = Vector2(0.334, 0.334)
+[node name="ShredderAFx1PiaPh001" type="Sprite2D" parent="."]
+position = Vector2(1235.58, 560.666)
 texture = ExtResource("33_sfql5")
-metadata/_edit_lock_ = true
 
-[node name="ShredderAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="ShredderAPiaPh001" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(1745.27, 815.734)
-scale = Vector2(0.334084, 0.334084)
+position = Vector2(1036, 507.149)
 texture = ExtResource("17_ux3o1")
-metadata/_edit_lock_ = true
 
-[node name="BackgroundBPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="BackgroundBPiaPh001" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(1765.16, 539.993)
-scale = Vector2(0.333335, 0.333335)
-texture = ExtResource("18_3g1ao")
-metadata/_edit_lock_ = true
+position = Vector2(1796.12, 342.548)
 
-[node name="EndDayAPiaPh001" type="Sprite2D" parent="CanvasLayer"]
+[node name="EndDayAPiaPh001" type="Sprite2D" parent="."]
 z_index = 3
-position = Vector2(2573.31, 516.986)
-scale = Vector2(0.193052, 0.193052)
-texture = ExtResource("29_ir6u0")
+position = Vector2(3194.31, 302.744)
+
+[node name="Memo-b-02" type="Sprite2D" parent="."]
+position = Vector2(-383.062, -112.976)
+texture = ExtResource("35_xqh0i")
+
+[node name="Memo-e-02" type="Sprite2D" parent="."]
+position = Vector2(-404.627, -253.128)
+texture = ExtResource("36_h2xh1")
+
+[node name="Cart-b-01" type="Sprite2D" parent="."]
+position = Vector2(1026.73, -70.9741)
+texture = ExtResource("37_05i4a")
