@@ -9,15 +9,15 @@ func remove_from_array(array: Array, item) -> bool:
 	
 func compute_global_z_index(node: Node2D) -> int:
 	if node == null: return 0
-	var z_index = node.z_index
+	var z = node.z_index
 	
 	var parent: Node2D
 	if node.get_parent() is Node2D:
 		parent = node.get_parent()
 	
 	if node.z_as_relative && parent != null:
-		z_index += compute_global_z_index(parent)
-	return z_index
+		z += compute_global_z_index(parent)
+	return z
 
 func point_cast_z_ordered(point: Vector2, collision_mask: int = 0xFFFFFFFF) -> Array[Node2D]:
 	var params: PhysicsPointQueryParameters2D = PhysicsPointQueryParameters2D.new()

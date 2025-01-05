@@ -62,6 +62,7 @@ func set_state(state: GameState):
 			game_scene.animation_player.play("day_intro")
 		
 		GameState.GAME:
+			spawn_and_engage_next_item()
 			pass
 			
 		GameState.COMMENTS:
@@ -116,7 +117,7 @@ func _process(_delta: float):
 	if input.hovered_objects.size() > 0:
 		input.topmost_hovered_object = input.hovered_objects[0]
 		
-	#print(input.hovered_object)
+	#print(input.topmost_hovered_object)
 	
 	# Process state machine
 	match game_state:
@@ -125,16 +126,12 @@ func _process(_delta: float):
 		
 		GameState.GAME:
 			if input.topmost_hovered_object is BookBox && input.interact_just_pressed:
-				if item_pool.size() > 0:
-					var item = item_pool[0].instantiate()
-					item_pool.remove_at(0)
-					game_scene.add_child(item)
-					item.position = Vector2(250, 220) + current_items.size() * Vector2(30, 30)
-					game_scene.book_box.update_item_count(item_pool.size())
-					
-					if item is Item:
-						current_items.append(item)
-					
+				if game_scene.book_box.has_item_engaged():
+					game_scene.book_box.project_engaged_item()
+					spawn_and_engage_next_item()
+				else:
+					# do some fix
+					pass					
 			
 			item_manager.process(input)
 			
@@ -144,7 +141,7 @@ func _process(_delta: float):
 					any_book_out = true
 					break
 			
-			if !any_book_out && item_pool.size() == 0:
+			if !any_book_out && !game_scene.book_box.has_item_engaged() && item_pool.size() == 0:
 				check_rules()
 				set_state(GameState.COMMENTS)
 			pass
@@ -203,6 +200,7 @@ func reset_game():
 	current_items.clear()
 	item_pool.clear()
 	
+	game_scene.book_box.reset()
 	day_result = null
 
 func setup_day(day_index: int):
@@ -253,7 +251,7 @@ func setup_day(day_index: int):
 		var rule_item: Rule = game_data.rule_prefab.instantiate()
 		rule_item.set_text(rule_script.get_text())
 		game_scene.add_child(rule_item)
-		rule_item.position = Vector2(120, 20) + active_rules.size() * Vector2(215, 0)
+		rule_item.position = Vector2(200, 20) + active_rules.size() * Vector2(215, 0)
 		
 		current_items.append(rule_item)
 		active_rules.append(rule_script)
@@ -273,3 +271,21 @@ func end_animation_finished(anim_name: StringName):
 	reset_game()
 	setup_day(0)
 	set_state(GameState.DAY_INTRO)
+	
+func spawn_and_engage_next_item():
+	assert(!game_scene.book_box.has_item_engaged())
+	
+	if item_pool.size() <= 0:
+		return
+	
+	var item = item_pool[0].instantiate()
+	assert(item is Item)
+	
+	item_pool.remove_at(0)
+	game_scene.add_child(item)
+	game_scene.book_box.engage_item(item)
+	#item.position = Vector2(250, 220) + current_items.size() * Vector2(30, 30)
+	#game_scene.book_box.update_item_count(item_pool.size())
+	
+	current_items.append(item)
+	

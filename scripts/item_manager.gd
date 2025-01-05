@@ -26,7 +26,7 @@ func process(input: InputData):
 		hovered_item = input.topmost_hovered_object
 	
 	if dragged_item == null && input.interact_just_pressed:
-		if hovered_item != null:
+		if hovered_item != null && hovered_item.can_be_dragged:
 			# acquire dragged item
 			move_item_on_top(hovered_item)
 			dragged_item = hovered_item
