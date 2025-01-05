@@ -16,7 +16,6 @@ func set_drag_enabled(value: bool):
 		drop_dragged_item()
 
 func initialize():
-	#fetch_items($"/root", items)
 	update_items_z()
 
 func process(input: InputData):
@@ -36,7 +35,7 @@ func process(input: InputData):
 	if dragged_item != null && !input.interact_down:
 		drop_dragged_item()
 		
-	if dragged_item != null:
+	if dragged_item != null && tools.point_cast_z_ordered_first(input.mouse_position, 2) != null:
 		dragged_item.position = input.mouse_position - drag_offset
 
 func move_item_on_top(item: Item):
@@ -67,9 +66,3 @@ func unregister_item(item: Item):
 	var found = tools.remove_from_array(items, item)
 	assert(found)
 	update_items_z()
-	
-#func fetch_items(node: Node, results: Array[Item]):
-	#if node is Item:
-		#results.push_back(node)
-	#for child in node.get_children():
-		#fetch_items(child, results)
