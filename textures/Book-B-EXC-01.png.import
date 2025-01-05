@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8xev2eu6jdgf"
-path="res://.godot/imported/Book-B-FX2-01.png-d16d4972b53de2f81293f04fb2a78778.ctex"
+uid="uid://bpdoras404m1i"
+path="res://.godot/imported/Book-B-EXC-01.png-1891bcfb85f13ce89168b940f6124e01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Book-B-FX2-01.png"
-dest_files=["res://.godot/imported/Book-B-FX2-01.png-d16d4972b53de2f81293f04fb2a78778.ctex"]
+source_file="res://textures/Book-B-EXC-01.png"
+dest_files=["res://.godot/imported/Book-B-EXC-01.png-1891bcfb85f13ce89168b940f6124e01.ctex"]
 
 [params]
 
