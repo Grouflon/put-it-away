@@ -109,7 +109,7 @@ func _process(_delta: float):
 	input.interact_just_released = Input.is_action_just_released("Interact")
 	input.interact_down = Input.is_action_pressed("Interact")
 	input.mouse_position = get_viewport().get_mouse_position()
-	var results = game_scene.point_cast_z_ordered(input.mouse_position)
+	var results = tools.point_cast_z_ordered(input.mouse_position, 1)
 	for result in results:
 		if result.get_parent() == null: continue
 		input.hovered_objects.append(result.get_parent())
